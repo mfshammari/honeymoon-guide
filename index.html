@@ -713,6 +713,155 @@ footer span.v { color: var(--vienna); }
   .content { padding: 36px 16px; }
   .route-stop { padding: 0 16px; }
 }
+
+
+/* ════════════════════════════════════════
+   RESPONSIVE — Desktop / iPad / iPhone
+   ════════════════════════════════════════ */
+
+/* ── Base: Desktop 1024px+ ── */
+@media (min-width: 1024px) {
+  .content { padding: 64px 40px; }
+  .hotel-body { padding: 32px 36px; }
+  .city-overlay { padding: 72px 56px 48px; }
+  .route-stop { padding: 0 48px; }
+  .checklist-section { padding: 72px 40px 80px; }
+  .countdown-bar { gap: 56px; padding: 24px 40px; }
+  .countdown-num { font-size: 48px; min-width: 54px; }
+}
+
+/* ── iPad Pro / Tablet 768–1023px ── */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .content { padding: 48px 32px; }
+  .hotel-body { padding: 24px 28px; }
+  .city-overlay { padding: 56px 36px 36px; }
+  .city-hero-img { height: 50vh; min-height: 280px; }
+  .route-stop { padding: 0 28px; }
+  .route-name { font-size: 20px; }
+  .hero h1 { font-size: clamp(48px, 9vw, 80px); }
+  .countdown-bar { gap: 32px; }
+  .countdown-num { font-size: 38px; min-width: 44px; }
+  .day-num { font-size: 48px; }
+  .act { padding: 16px 18px; }
+  .hotel-img { height: 240px; }
+  nav a { font-size: 11px; padding: 5px 12px; }
+  .checklist-section { padding: 56px 32px 64px; }
+  .row { grid-template-columns: 28px 1fr auto; gap: 10px; }
+}
+
+/* ── iPad Mini / Small Tablet 600–767px ── */
+@media (max-width: 767px) and (min-width: 600px) {
+  .content { padding: 40px 24px; }
+  .city-hero-img { height: 44vh; min-height: 240px; }
+  .city-overlay { padding: 48px 28px 28px; }
+  .city-overlay h2 { font-size: clamp(34px, 6vw, 52px); }
+  .route-bar { padding: 20px 16px; }
+  .route-stop { padding: 0 18px; }
+  .hero h1 { font-size: clamp(44px, 8vw, 64px); }
+  .countdown-num { font-size: 34px; min-width: 40px; }
+  .countdown-bar { gap: 24px; padding: 16px 20px; }
+  .hotel-img { height: 220px; }
+  .hotel-body { padding: 20px 22px; }
+  .summary { grid-template-columns: 1fr 1fr 1fr; }
+  nav { padding: 10px 14px; gap: 2px; }
+  nav a { font-size: 11px; padding: 4px 10px; }
+}
+
+/* ── iPhone / Mobile 390–599px ── */
+@media (max-width: 599px) {
+  body { font-size: 14px; }
+
+  nav { padding: 10px 10px; gap: 2px; flex-wrap: wrap; }
+  nav a { font-size: 10.5px; padding: 4px 8px; letter-spacing: 0.05em; }
+
+  .hero { padding: 70px 16px 48px; min-height: 100svh; }
+  .hero h1 { font-size: clamp(48px, 16vw, 72px); line-height: 0.9; }
+  .hero-eyebrow { font-size: 9px; letter-spacing: 0.2em; margin-bottom: 20px; }
+  .hero-meta { gap: 10px 16px; font-size: 10px; }
+
+  .countdown-bar { gap: 12px; padding: 14px 10px; flex-wrap: nowrap; }
+  .countdown-item { flex: 1; }
+  .countdown-title { font-size: 10px; }
+  .countdown-label { font-size: 9px; }
+  .countdown-num { font-size: 26px; min-width: 30px; }
+  .countdown-unit { font-size: 8px; }
+  .countdown-sep { font-size: 20px; padding-bottom: 6px; }
+
+  .route-bar { padding: 18px 12px; gap: 0; }
+  .route-stop { padding: 0 10px; }
+  .route-icon { width: 40px; height: 40px; font-size: 17px; margin-bottom: 8px; }
+  .route-name { font-size: 17px; }
+  .route-dates { font-size: 10px; }
+  .route-connector { font-size: 18px; margin-bottom: 16px; }
+
+  .city-hero-img { height: 56vw; min-height: 200px; max-height: 300px; }
+  .city-overlay { padding: 36px 16px 20px; }
+  .city-overlay h2 { font-size: clamp(30px, 11vw, 44px); margin-bottom: 10px; }
+  .city-tag { font-size: 9px; margin-bottom: 7px; }
+  .city-stats { gap: 6px 12px; font-size: 11px; }
+
+  .content { padding: 28px 14px; }
+
+  .hotel-block { border-radius: 2px; margin-bottom: 32px; }
+  .hotel-img { height: 180px; }
+  .hotel-body { padding: 16px 14px; }
+  .hotel-body h3 { font-size: 22px; }
+  .hotel-sub { font-size: 12px; margin-bottom: 10px; }
+  .hotel-price { font-size: 12px; padding: 6px 12px; margin-bottom: 12px; }
+  .hotel-body p { font-size: 13px; }
+  .tip { font-size: 12px; padding: 10px 12px; }
+
+  .days-header { font-size: 9px; margin-bottom: 24px; }
+
+  .day { margin-bottom: 36px; padding-bottom: 36px; }
+  .day-head { gap: 10px; margin-bottom: 14px; }
+  .day-num { font-size: 40px; }
+  .day-title { font-size: 16px; }
+  .day-date { font-size: 11px; }
+
+  .act { padding: 14px 14px; margin-bottom: 8px; }
+  .act-name { font-size: 13.5px; }
+  .act p { font-size: 13px; }
+  .act-time { font-size: 10px; }
+  .badge { font-size: 8px; padding: 2px 7px; }
+  .fact { font-size: 12px; padding: 9px 11px; }
+
+  .dinner { padding: 12px 14px; gap: 10px; }
+  .dinner-icon { font-size: 18px; }
+  .dinner-name { font-size: 13px; }
+  .dinner-desc { font-size: 12px; }
+
+  .events-label { font-size: 9px; margin-top: 14px; margin-bottom: 7px; }
+  .event-card { padding: 10px 13px; gap: 10px; }
+  .event-title { font-size: 13px; }
+  .event-meta { font-size: 11px; }
+
+  .cl-group-title { font-size: 9px; }
+  .cl-text { font-size: 13px; }
+  .cl-urgency { font-size: 10px; }
+  .checklist-section { padding: 36px 14px 56px; }
+
+  .transit { padding: 12px 14px; font-size: 12px; }
+}
+
+/* ── iPhone SE / Mini 375px ── */
+@media (max-width: 390px) {
+  .hero h1 { font-size: clamp(44px, 18vw, 62px); }
+  .countdown-bar { gap: 6px; padding: 12px 8px; }
+  .countdown-num { font-size: 22px; min-width: 26px; }
+  .countdown-sep { font-size: 16px; }
+  nav a { font-size: 10px; padding: 3px 6px; }
+  .route-stop { padding: 0 6px; }
+  .content { padding: 24px 12px; }
+  .hotel-body { padding: 14px 12px; }
+}
+
+/* ── Safe area for notch phones ── */
+@supports (padding: max(0px)) {
+  nav { padding-top: max(12px, env(safe-area-inset-top)); }
+  footer { padding-bottom: max(40px, env(safe-area-inset-bottom)); }
+}
+
 </style>
 </head>
 <body>
