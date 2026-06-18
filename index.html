@@ -94,10 +94,10 @@ body {
 .hero-meta {
   margin-top: 32px;
   display: flex;
-  gap: 28px;
+  gap: 16px 28px;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -138,7 +138,7 @@ nav a.vienna { color: var(--vienna); }
 .route-bar {
   background: var(--deep);
   border-bottom: 1px solid var(--border);
-  padding: 28px 24px;
+  padding: 32px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,33 +148,35 @@ nav a.vienna { color: var(--vienna); }
 
 .route-stop {
   text-align: center;
-  padding: 0 32px;
+  padding: 0 36px;
 }
 
 .route-icon {
-  width: 48px; height: 48px;
+  width: 52px; height: 52px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 20px;
-  margin: 0 auto 10px;
+  font-size: 22px;
+  margin: 0 auto 12px;
   border: 1px solid;
+  transition: transform 0.2s;
 }
-.route-icon.p { border-color: var(--prague); background: rgba(200,153,90,0.1); }
-.route-icon.v { border-color: var(--vienna); background: rgba(123,158,196,0.1); }
+.route-icon:hover { transform: scale(1.08); }
+.route-icon.p { border-color: var(--prague); background: rgba(200,153,90,0.12); }
+.route-icon.v { border-color: var(--vienna); background: rgba(123,158,196,0.12); }
 
-.route-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--snow); }
-.route-dates { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-top: 3px; }
+.route-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 400; color: var(--snow); }
+.route-dates { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-top: 4px; }
 
 .route-connector {
-  font-size: 24px;
-  color: var(--border);
-  padding: 0 8px;
-  margin-bottom: 20px;
+  font-size: 22px;
+  color: rgba(255,255,255,0.2);
+  padding: 0 4px;
+  margin-bottom: 22px;
+  letter-spacing: -2px;
 }
 
 /* ── CITY SECTION ── */
 .city-section { position: relative; }
-
 
 .city-hero-img {
   width: 100%;
@@ -203,8 +205,11 @@ nav a.vienna { color: var(--vienna); }
 .city-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  padding: 48px 40px 40px;
-  background: linear-gradient(to top, var(--night) 0%, transparent 100%);
+  padding: 60px 40px 36px;
+  background: linear-gradient(to top, rgba(13,15,20,0.96) 0%, rgba(13,15,20,0.5) 50%, transparent 100%);
+}
+@media (max-width: 600px) {
+  .city-overlay { padding: 40px 20px 24px; }
 }
 
 .city-tag {
@@ -226,8 +231,19 @@ nav a.vienna { color: var(--vienna); }
 }
 
 .city-stats {
-  display: flex; gap: 20px; flex-wrap: wrap;
-  font-size: 12px; color: var(--muted); letter-spacing: 0.06em;
+  display: flex;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(240,238,233,0.7);
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+.city-stats span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
 }
 
 /* ── CONTENT WRAPPER ── */
@@ -260,6 +276,7 @@ nav a.vienna { color: var(--vienna); }
 }
 
 .hotel-body { padding: 28px 32px; }
+@media (max-width: 600px) { .hotel-body { padding: 20px 18px; } }
 
 .hotel-tag {
   font-size: 10px;
@@ -295,13 +312,14 @@ nav a.vienna { color: var(--vienna); }
 .hotel-body p { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 12px; }
 
 .tip {
-  border-right: 2px solid var(--gold);
-  padding: 12px 16px;
-  background: rgba(212,175,106,0.06);
+  border-right: 3px solid var(--gold);
+  padding: 13px 16px;
+  background: rgba(212,175,106,0.07);
   font-size: 13px;
   color: var(--text);
-  margin-top: 14px;
-  border-radius: 0 2px 2px 0;
+  margin-top: 16px;
+  border-radius: 0 3px 3px 0;
+  line-height: 1.7;
 }
 
 /* ── DAYS HEADER ── */
@@ -335,7 +353,7 @@ nav a.vienna { color: var(--vienna); }
   font-size: 56px;
   font-weight: 300;
   line-height: 1;
-  opacity: 0.18;
+  opacity: 0.12;
   color: var(--snow);
   flex-shrink: 0;
 }
@@ -352,7 +370,9 @@ nav a.vienna { color: var(--vienna); }
   padding: 20px 22px;
   margin-bottom: 10px;
   position: relative;
+  transition: border-color 0.2s;
 }
+.act:hover { border-color: rgba(255,255,255,0.13); }
 
 .act.star-p { border-right: 3px solid var(--prague); }
 .act.star-v { border-right: 3px solid var(--vienna); }
@@ -485,7 +505,11 @@ nav a.vienna { color: var(--vienna); }
 .bt-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
 
 /* ── CHECKLIST ── */
-.checklist-section { padding: 64px 24px; max-width: 900px; margin: 0 auto; }
+.checklist-section {
+  padding: 64px 24px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 .cl-group { margin-bottom: 36px; }
 
@@ -578,8 +602,12 @@ nav a.vienna { color: var(--vienna); }
   font-size: 42px;
   font-weight: 300;
   line-height: 1;
-  min-width: 52px;
+  min-width: 48px;
   display: block;
+}
+@media (max-width: 480px) {
+  .countdown-num { font-size: 32px; min-width: 36px; }
+  .countdown-bar { gap: 20px; padding: 16px 12px; }
 }
 
 .countdown-num.wedding { color: var(--gold); }
@@ -640,26 +668,40 @@ nav a.vienna { color: var(--vienna); }
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--prague);
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.events-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
 }
 .events-label.v { color: var(--vienna); }
 
 /* ── FOOTER ── */
 footer {
-  background: var(--night);
+  background: var(--deep);
   border-top: 1px solid var(--border);
   text-align: center;
-  padding: 32px 24px;
+  padding: 40px 24px;
   font-size: 12px;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--muted);
 }
 footer span.p { color: var(--prague); }
 footer span.v { color: var(--vienna); }
 
 /* ── DIVIDER ── */
-.city-divider { border: none; border-top: 1px solid var(--border); }
+.city-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+  opacity: 0.6;
+}
 
 @media (max-width:600px) {
   .city-overlay { padding: 24px 20px 24px; }
@@ -765,7 +807,7 @@ footer span.v { color: var(--vienna); }
     <div class="route-name">براغ</div>
     <div class="route-dates">1–6 ديسمبر · 5 ليالٍ</div>
   </div>
-  <div class="route-connector">→</div>
+  <div class="route-connector">←</div>
   <div class="route-stop">
     <div class="route-icon v">🎼</div>
     <div class="route-name">فيينا</div>
