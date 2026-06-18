@@ -183,20 +183,22 @@ nav a.vienna { color: var(--vienna); }
   background-size: cover;
   background-position: center 35%;
   display: block;
-  position: relative;
 }
 @media (max-width: 600px) {
   .city-hero-img {
-    height: 56vw;
+    height: 60vw;
     min-height: 220px;
-    max-height: 340px;
+    max-height: 360px;
   }
 }
 
-.city-section {
+.city-section { position: relative; }
+
+.city-hero-wrap {
   position: relative;
   overflow: hidden;
 }
+
 .city-overlay {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -772,15 +774,17 @@ footer span.v { color: var(--vienna); }
 
 <!-- ═══════════════ PRAGUE ═══════════════ -->
 <section class="city-section" id="prague">
-  <div class="city-hero-img" style="background-image:url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=1400&h=700&fit=crop&crop=center&q=90'), linear-gradient(135deg, #1a1008 0%, #3d2810 40%, #1a1008 100%);"></div>
-  <div class="city-overlay">
-    <div class="city-tag p">المحطة الأولى · STOP I</div>
-    <h2>براغ</h2>
-    <div class="city-stats">
-      <span>🌡 0–5°م مع احتمال ثلج</span>
-      <span>📅 1–6 ديسمبر</span>
-      <span>🏨 5 ليالٍ</span>
-      <span>✨ المدينة التي تبدو أجمل تحت الثلج</span>
+  <div class="city-hero-wrap">
+    <div class="city-hero-img" style="background-image:url('https://images.unsplash.com/photo-1541849546-216549ae216d?w=1400&h=700&fit=crop&crop=center&q=90'), linear-gradient(135deg, #1a1008 0%, #3d2810 40%, #1a1008 100%);"></div>
+    <div class="city-overlay">
+      <div class="city-tag p">المحطة الأولى · STOP I</div>
+      <h2>براغ</h2>
+      <div class="city-stats">
+        <span>🌡 0–5°م مع احتمال ثلج</span>
+        <span>📅 1–6 ديسمبر</span>
+        <span>🏨 5 ليالٍ</span>
+        <span>✨ المدينة التي تبدو أجمل تحت الثلج</span>
+      </div>
     </div>
   </div>
 
@@ -1090,16 +1094,18 @@ footer span.v { color: var(--vienna); }
 
 <!-- ═══════════════ VIENNA ═══════════════ -->
 <section class="city-section" id="vienna">
-  <div class="city-hero-img" style="background-image:url('https://images.unsplash.com/photo-1516550135131-fe3dcb0bedc2?w=1400&h=700&fit=crop&crop=center&q=90'), linear-gradient(135deg, #08101a 0%, #102840 40%, #08101a 100%);"></div>
-  <div class="city-overlay">
-    <div class="city-tag v">المحطة الثانية · STOP II</div>
-    <h2>فيينا</h2>
-    <div class="city-stats">
-      <span>🌡 2–6°م</span>
-      <span>📅 6–11 ديسمبر</span>
-      <span>🏨 5 ليالٍ</span>
-      <span>🎻 حيث وُلدت الموسيقى الكلاسيكية</span>
-      <span>👑 مدينة تشعرك أنك ملك وملكة</span>
+  <div class="city-hero-wrap">
+    <div class="city-hero-img" style="background-image:url('https://images.unsplash.com/photo-1516550135131-fe3dcb0bedc2?w=1400&h=700&fit=crop&crop=center&q=90'), linear-gradient(135deg, #08101a 0%, #102840 40%, #08101a 100%);"></div>
+    <div class="city-overlay">
+      <div class="city-tag v">المحطة الثانية · STOP II</div>
+      <h2>فيينا</h2>
+      <div class="city-stats">
+        <span>🌡 2–6°م</span>
+        <span>📅 6–11 ديسمبر</span>
+        <span>🏨 5 ليالٍ</span>
+        <span>🎻 حيث وُلدت الموسيقى الكلاسيكية</span>
+        <span>👑 مدينة تشعرك أنك ملك وملكة</span>
+      </div>
     </div>
   </div>
 
