@@ -1634,58 +1634,55 @@ function updateCountdowns() {
 updateCountdowns();
 setInterval(updateCountdowns, 1000);
 
-// Snowflakes animation
-const canvas = document.getElementById('snowCanvas');
-const ctx = canvas.getContext('2d');
-let flakes = [];
+// ── Snowflakes — fixed overlay, full viewport ──
+(function() {
+  const canvas = document.getElementById('snowCanvas');
+  const ctx    = canvas.getContext('2d');
+  let W = 0, H = 0, flakes = [];
 
-function resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  // Reinitialize flakes spread across full canvas on resize
-  if (flakes.length > 0) {
-    flakes.forEach(f => {
-      f.x = Math.random() * canvas.width;
-    });
+  function init() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+    flakes = [];
+    for (let i = 0; i < 140; i++) {
+      flakes.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: Math.random() * 2.6 + 0.4,
+        speed:  Math.random() * 0.65 + 0.15,
+        drift:  Math.random() * 0.4  - 0.2,
+        alpha:  Math.random() * 0.4  + 0.08,
+        wobble: Math.random() * Math.PI * 2,
+        wSpeed: Math.random() * 0.012 + 0.004
+      });
+    }
   }
-}
 
-// Force resize immediately and on load
-resize();
-window.addEventListener('resize', resize);
-window.addEventListener('load', resize);
-document.addEventListener('DOMContentLoaded', resize);
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    flakes.forEach(f => {
+      ctx.beginPath();
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(240,238,233,${f.alpha})`;
+      ctx.fill();
+      f.wobble += f.wSpeed;
+      f.y += f.speed;
+      f.x += f.drift + Math.sin(f.wobble) * 0.25;
+      if (f.y > H + 4)  { f.y = -4;  f.x = Math.random() * W; }
+      if (f.x > W + 4)  { f.x = -4; }
+      if (f.x < -4)     { f.x = W + 4; }
+    });
+    requestAnimationFrame(draw);
+  }
 
-for (let i = 0; i < 130; i++) {
-  flakes.push({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    r: Math.random() * 2.8 + 0.4,
-    speed: Math.random() * 0.7 + 0.15,
-    drift: Math.random() * 0.5 - 0.25,
-    opacity: Math.random() * 0.45 + 0.08,
-    wobble: Math.random() * Math.PI * 2,
-    wobbleSpeed: Math.random() * 0.01 + 0.005
-  });
-}
-
-function drawSnow() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  flakes.forEach(f => {
-    ctx.beginPath();
-    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(240,238,233,${f.opacity})`;
-    ctx.fill();
-    f.wobble += f.wobbleSpeed;
-    f.y += f.speed;
-    f.x += f.drift + Math.sin(f.wobble) * 0.3;
-    if (f.y > canvas.height + 5) { f.y = -5; f.x = Math.random() * canvas.width; }
-    if (f.x > canvas.width + 5) f.x = -5;
-    if (f.x < -5) f.x = canvas.width + 5;
-  });
-  requestAnimationFrame(drawSnow);
-}
-drawSnow();
+  // Init on load + resize
+  window.addEventListener('resize', init);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => { init(); draw(); });
+  } else {
+    init(); draw();
+  }
+})();
 
 // Nav scroll
 document.querySelectorAll('nav a').forEach(a => {
