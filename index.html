@@ -1,0 +1,1618 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>دليل شهر العسل — براغ وفيينا ديسمبر 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --night: #0D0F14;
+  --deep: #161922;
+  --card: #1C2030;
+  --border: rgba(255,255,255,0.07);
+  --snow: #F0EEE9;
+  --warm: #FAF8F4;
+  --muted: #7A8090;
+  --prague: #C8995A;   /* bronze/amber — Prague's baroque gold */
+  --vienna: #7B9EC4;   /* icy blue — Vienna imperial */
+  --gold: #D4AF6A;
+  --text: #D8D4CC;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: var(--night);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ── SNOWFLAKE HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  position: relative;
+  overflow: hidden;
+  background: var(--night);
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(200,153,90,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 20% 100%, rgba(123,158,196,0.10) 0%, transparent 60%);
+}
+
+/* animated snowflakes — the signature element */
+.snow-canvas {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-content { position: relative; z-index: 2; }
+
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  opacity: 0.85;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  font-size: clamp(52px, 10vw, 110px);
+  line-height: 0.95;
+  color: var(--snow);
+  letter-spacing: -0.01em;
+}
+
+.hero h1 .city-a { color: var(--prague); }
+.hero h1 .amp {
+  font-style: italic;
+  font-size: 0.55em;
+  color: var(--muted);
+  display: block;
+  margin: 8px 0;
+}
+.hero h1 .city-b { color: var(--vienna); }
+
+.hero-meta {
+  margin-top: 32px;
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-meta span { display: flex; align-items: center; gap: 6px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13,15,20,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+nav a:hover { color: var(--snow); background: var(--card); }
+nav a.prague { color: var(--prague); }
+nav a.vienna { color: var(--vienna); }
+
+/* ── ROUTE BAR ── */
+.route-bar {
+  background: var(--deep);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.route-stop {
+  text-align: center;
+  padding: 0 32px;
+}
+
+.route-icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+  margin: 0 auto 10px;
+  border: 1px solid;
+}
+.route-icon.p { border-color: var(--prague); background: rgba(200,153,90,0.1); }
+.route-icon.v { border-color: var(--vienna); background: rgba(123,158,196,0.1); }
+
+.route-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--snow); }
+.route-dates { font-size: 11px; color: var(--muted); letter-spacing: 0.08em; margin-top: 3px; }
+
+.route-connector {
+  font-size: 24px;
+  color: var(--border);
+  padding: 0 8px;
+  margin-bottom: 20px;
+}
+
+/* ── CITY SECTION ── */
+.city-section { position: relative; }
+
+.city-hero-img {
+  width: 100%; height: 60vh; min-height: 320px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.45);
+}
+
+.city-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 48px 40px 40px;
+  background: linear-gradient(to top, var(--night) 0%, transparent 100%);
+}
+
+.city-tag {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.city-tag.p { color: var(--prague); }
+.city-tag.v { color: var(--vienna); }
+
+.city-overlay h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 300;
+  color: var(--snow);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.city-stats {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  font-size: 12px; color: var(--muted); letter-spacing: 0.06em;
+}
+
+/* ── CONTENT WRAPPER ── */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+/* ── HOTEL ── */
+.hotel-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 48px;
+}
+
+.hotel-img {
+  width: 100%; height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.hotel-body { padding: 28px 32px; }
+
+.hotel-tag {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+.hotel-tag.p { color: var(--prague); }
+.hotel-tag.v { color: var(--vienna); }
+
+.hotel-body h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--snow);
+  margin-bottom: 4px;
+}
+
+.hotel-sub { font-size: 13px; color: var(--muted); margin-bottom: 14px; }
+
+.hotel-price {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+.hotel-price.p { background: rgba(200,153,90,0.12); color: var(--prague); }
+.hotel-price.v { background: rgba(123,158,196,0.12); color: var(--vienna); }
+
+.hotel-body p { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 12px; }
+
+.tip {
+  border-right: 2px solid var(--gold);
+  padding: 12px 16px;
+  background: rgba(212,175,106,0.06);
+  font-size: 13px;
+  color: var(--text);
+  margin-top: 14px;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ── DAYS HEADER ── */
+.days-header {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+/* ── DAY BLOCK ── */
+.day {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+.day:last-child { border-bottom: none; }
+
+.day-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.day-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.18;
+  color: var(--snow);
+  flex-shrink: 0;
+}
+
+.day-info {}
+.day-title { font-size: 19px; font-weight: 700; color: var(--snow); margin-bottom: 2px; }
+.day-date { font-size: 12px; color: var(--muted); letter-spacing: 0.06em; }
+
+/* ── ACTIVITY ── */
+.act {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 20px 22px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.act.star-p { border-right: 3px solid var(--prague); }
+.act.star-v { border-right: 3px solid var(--vienna); }
+
+.act-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.act-name { font-size: 15px; font-weight: 700; color: var(--snow); }
+
+.badge {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.b-free   { background: rgba(100,200,120,0.12); color: #6DC87A; border: 1px solid rgba(100,200,120,0.2); }
+.b-book   { background: rgba(240,160,50,0.12);  color: #F0A032; border: 1px solid rgba(240,160,50,0.2); }
+.b-star   { background: var(--gold); color: var(--night); }
+.b-must   { background: rgba(200,100,100,0.15); color: #E87070; border: 1px solid rgba(200,100,100,0.2); }
+
+.act p { font-size: 13.5px; color: var(--text); line-height: 1.72; }
+
+.act-time {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 10px;
+  font-family: monospace;
+  letter-spacing: 0.04em;
+}
+
+.fact {
+  margin-top: 10px;
+  padding: 10px 13px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 2px;
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.fact strong { color: var(--snow); }
+
+/* ── DINNER ── */
+.dinner {
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 14px 18px;
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  background: rgba(255,255,255,0.02);
+}
+.dinner-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.dinner-name { font-size: 14px; font-weight: 700; color: var(--snow); margin-bottom: 3px; }
+.dinner-desc { font-size: 12.5px; color: var(--muted); }
+
+/* ── TRANSIT NOTICE ── */
+.transit {
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 14px 18px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--text);
+  background: rgba(255,255,255,0.02);
+}
+.transit strong { color: var(--gold); }
+
+/* ── BUDGET ── */
+.budget-section {
+  background: var(--deep);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 64px 24px;
+}
+
+.budget-inner { max-width: 900px; margin: 0 auto; }
+
+.section-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--snow);
+  margin-bottom: 8px;
+}
+.section-sub { font-size: 13px; color: var(--muted); margin-bottom: 36px; }
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+@media (max-width:580px) { .budget-grid { grid-template-columns: 1fr; } }
+
+.budget-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 18px 20px;
+}
+
+.budget-label { font-size: 12px; color: var(--muted); margin-bottom: 4px; letter-spacing: 0.04em; }
+.budget-val { font-family: 'Cormorant Garamond', serif; font-size: 26px; color: var(--gold); font-weight: 400; }
+.budget-note { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+.budget-total {
+  background: var(--card);
+  border: 1px solid rgba(212,175,106,0.25);
+  border-radius: 3px;
+  padding: 22px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.bt-label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.bt-amount { font-family: 'Cormorant Garamond', serif; font-size: 40px; color: var(--snow); font-weight: 300; }
+.bt-note { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+/* ── CHECKLIST ── */
+.checklist-section { padding: 64px 24px; max-width: 900px; margin: 0 auto; }
+
+.cl-group { margin-bottom: 36px; }
+
+.cl-group-title {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cl-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.cl-item:last-child { border-bottom: none; }
+.cl-item.done { opacity: 0.4; }
+
+.cl-circle {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  flex-shrink: 0;
+  margin-top: 3px;
+  transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+}
+.cl-item.done .cl-circle {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--night);
+}
+
+.cl-text { font-size: 14px; color: var(--text); }
+.cl-urgency { font-size: 11px; margin-top: 2px; }
+.urg-now  { color: #E87070; font-weight: 700; }
+.urg-soon { color: #F0A032; }
+.urg-ok   { color: var(--muted); }
+
+
+/* ── COUNTDOWN ── */
+.countdown-bar {
+  background: var(--deep);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+}
+
+.countdown-item {
+  text-align: center;
+}
+
+.countdown-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.countdown-blocks {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.countdown-block {
+  text-align: center;
+}
+
+.countdown-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 1;
+  min-width: 52px;
+  display: block;
+}
+
+.countdown-num.wedding { color: var(--gold); }
+.countdown-num.travel  { color: var(--vienna); }
+
+.countdown-unit {
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-top: 4px;
+}
+
+.countdown-sep {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  color: var(--border);
+  padding-bottom: 8px;
+}
+
+.countdown-title {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.countdown-title.wedding { color: var(--gold); }
+.countdown-title.travel  { color: var(--vienna); }
+
+/* ── EVENTS ── */
+.events-strip {
+  margin: 14px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.event-card {
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 3px;
+  padding: 12px 16px;
+  background: rgba(255,255,255,0.02);
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.event-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+.event-dot.p { background: var(--prague); }
+.event-dot.v { background: var(--vienna); }
+.event-title { font-size: 13.5px; font-weight: 700; color: var(--snow); margin-bottom: 2px; }
+.event-meta { font-size: 12px; color: var(--muted); }
+.events-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--prague);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.events-label.v { color: var(--vienna); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--night);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+footer span.p { color: var(--prague); }
+footer span.v { color: var(--vienna); }
+
+/* ── DIVIDER ── */
+.city-divider { border: none; border-top: 1px solid var(--border); }
+
+@media (max-width:600px) {
+  .city-overlay { padding: 24px 20px 24px; }
+  .hotel-body { padding: 20px; }
+  .content { padding: 36px 16px; }
+  .route-stop { padding: 0 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#overview">نظرة عامة</a>
+  <a href="#prague" class="prague">براغ</a>
+  <a href="#vienna" class="vienna">فيينا</a>
+  <a href="#booking">الحجوزات</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="overview">
+  <div class="hero-bg"></div>
+  <canvas class="snow-canvas" id="snowCanvas"></canvas>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">شهر العسل · ديسمبر 2026</div>
+    <h1>
+      <span class="city-a">براغ</span>
+      <span class="amp">&</span>
+      <span class="city-b">فيينا</span>
+    </h1>
+    <div class="hero-meta">
+      <span>❄️ 10 ليالٍ</span>
+      <span>🎄 أسواق الكريسماس</span>
+      <span>🏰 قصور وجسور</span>
+      <span>☕ كافيهات 1700</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- COUNTDOWN BAR -->
+<div class="countdown-bar" id="countdowns">
+  <div class="countdown-item">
+    <div class="countdown-title wedding">💍 يوم الزواج</div>
+    <div class="countdown-label">27 نوفمبر 2026</div>
+    <div class="countdown-blocks">
+      <div class="countdown-block">
+        <span class="countdown-num wedding" id="wd-days">--</span>
+        <span class="countdown-unit">يوم</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span class="countdown-num wedding" id="wd-hours">--</span>
+        <span class="countdown-unit">ساعة</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span class="countdown-num wedding" id="wd-mins">--</span>
+        <span class="countdown-unit">دقيقة</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span class="countdown-num wedding" id="wd-secs">--</span>
+        <span class="countdown-unit">ثانية</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="width:1px;background:var(--border);margin:0 8px;align-self:stretch;min-height:60px;"></div>
+
+  <div class="countdown-item">
+    <div class="countdown-title travel">✈️ موعد السفر</div>
+    <div class="countdown-label">1 ديسمبر 2026</div>
+    <div class="countdown-blocks">
+      <div class="countdown-block">
+        <span class="countdown-num travel" id="tr-days">--</span>
+        <span class="countdown-unit">يوم</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span class="countdown-num travel" id="tr-hours">--</span>
+        <span class="countdown-unit">ساعة</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span class="countdown-num travel" id="tr-mins">--</span>
+        <span class="countdown-unit">دقيقة</span>
+      </div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-block">
+        <span class="countdown-num travel" id="tr-secs">--</span>
+        <span class="countdown-unit">ثانية</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ROUTE BAR -->
+<div class="route-bar">
+  <div class="route-stop">
+    <div class="route-icon p">🏰</div>
+    <div class="route-name">براغ</div>
+    <div class="route-dates">1–6 ديسمبر · 5 ليالٍ</div>
+  </div>
+  <div class="route-connector">→</div>
+  <div class="route-stop">
+    <div class="route-icon v">🎼</div>
+    <div class="route-name">فيينا</div>
+    <div class="route-dates">6–11 ديسمبر · 5 ليالٍ</div>
+  </div>
+</div>
+
+<!-- ═══════════════ PRAGUE ═══════════════ -->
+<section class="city-section" id="prague">
+  <div style="position:relative;">
+    <img class="city-hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Praha_-_hrad%C4%8Dany_a_mala_strana_%28czech%29.jpg/1920px-Praha_-_hrad%C4%8Dany_a_mala_strana_%28czech%29.jpg"
+      onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Praha_-_star%C3%A9_m%C4%9Bsto.jpg/1920px-Praha_-_star%C3%A9_m%C4%9Bsto.jpg'" alt="براغ">
+    <div class="city-overlay">
+      <div class="city-tag p">المحطة الأولى · STOP I</div>
+      <h2>براغ</h2>
+      <div class="city-stats">
+        <span>🌡 0–5°م مع احتمال ثلج</span>
+        <span>📅 1–6 ديسمبر</span>
+        <span>🏨 5 ليالٍ</span>
+        <span>💱 كرونة تشيكية · أرخص من أوروبا الغربية بـ40%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- HOTEL PRAGUE -->
+    <div class="hotel-block">
+      <img class="hotel-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Prague_-_Mala_Strana.jpg/1280px-Prague_-_Mala_Strana.jpg" alt="براغ فندق">
+      <div class="hotel-body">
+        <div class="hotel-tag p">★ الترشيح الأول — سويت كاملة</div>
+        <h3>Grand Mark Prague</h3>
+        <div class="hotel-sub">5★ · The Leading Hotels of the World · Old Town · 293م من الساحة</div>
+        <div class="hotel-price p">~1,600 ر / ليلة · ~8,000 ر (5 ليالٍ)</div>
+        <p>سويت مضمونة: غرفة نوم منفصلة + صالة معيشة + حمام رخامي. فيه Honeymoon Suite تحديداً بإطلالة 360° على أسقف براغ القرميدية. في قلب Old Town — مشي لكل شيء.</p>
+        <p>عند الحجز اذكر "شهر العسل" — يرتّبون تزيين السويت بالورود والشوكولاتة والشمبانيا.</p>
+        <div class="tip">💡 بديل أقرب للجسر: <strong>Alchymist Grand Hotel</strong> في Malá Strana — سويت بغرفة نوم + صالة + مطبخ بـ~1,300 ر/ليلة، 3 دقائق من جسر تشارلز. أو للفخامة القصوى: <strong>Four Seasons Prague</strong> سويت بإطلالة على الجسر من السرير بـ~2,400 ر/ليلة.</div>
+      </div>
+    </div>
+
+    <div class="days-header">الجدول اليومي · 5 أيام في براغ</div>
+
+    <!-- DAY 1 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">١</div>
+        <div class="day-info">
+          <div class="day-title">يوم الوصول — أول مشي في المدينة السحرية</div>
+          <div class="day-date">الثلاثاء · 1 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act star-p">
+        <div class="act-head">
+          <div class="act-name">⭐ ساحة Old Town Square وسوق الكريسماس ليلاً</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>أول ليلة أهم ليلة. توصلون وقت الظهر، تشيكون بالفندق. بعد الاستراحة روحوا لساحة Old Town مع غروب الشمس (4:30م في ديسمبر). السوق يضيء عند الغروب بالكامل — آلاف المصابيح، رائحة النبيذ الساخن، موسيقى كلاسيكية حية، والثلج على أسقف الكنائس القوطية. التجربة التي جئتم من أجلها.</p>
+        <div class="act-time">14:00 وصول وتشيك إن · 16:00 الفندق للاستراحة · 16:30 توجه للساحة · 17:00 إضاءة السوق · 19:00 عشاء</div>
+        <div class="fact"><strong>🕰️ الساعة الفلكية (Orloj):</strong> أقدم ساعة فلكية تعمل في العالم منذ 1410م. كل ساعة يخرج 12 رسولاً خشبياً ويدور الموت بجرسه. يُقال أن صانعها فُقئت عيناه لمنعه من صنع ثانية!</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">Hot Wine (Svařák) وأكل الشارع في السوق</div>
+          <span class="badge b-free">~20 ر للاثنين</span>
+        </div>
+        <p>Svařák هو النبيذ الساخن التشيكي — القرفة والقرنفل والبرتقال. كوب بيد كل منكم وأنتم تمشون بين الكشك والكشك. جربوا Trdelník (معجنات حلوة دافئة محشوة بالشوكولاتة أو الكريمة).</p>
+        <div class="act-time">تناولوها أثناء تجوالكم بالسوق · لا يحتاج حجز</div>
+      </div>
+
+
+      <div class="events-label">🎭 فعالية ديسمبر — الليلة دي</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot p"></div>
+          <div>
+            <div class="event-title">ليلة القديس نيقولاوس — St. Nicholas Eve 🎅</div>
+            <div class="event-meta">5 ديسمبر في الشوارع · مجاني · تقليد تشيكي عمره 500 سنة</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">رجال يرتدون زي القديس نيقولاوس والشياطين والملائكة يجوبون شوارع براغ — يعطون الحلوى للأطفال الطيبين ويخيفون الشقيين! أنتم تصلون 1 ديسمبر لكن هذا التقليد في اليوم الأول من وصولكم يستمر أسبوعاً كأجواء في الشوارع.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot p"></div>
+          <div>
+            <div class="event-title">حفلات كنيسة Klementinum Mirror Chapel — موسيقى كلاسيكية</div>
+            <div class="event-meta">يومياً طوال ديسمبر · ~80 ر/شخص · مدة ساعة ونص</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">كنيسة مرايا باروكية من القرن 17 — الحفلات فيها شبه يومية في ديسمبر: موتزارت، فيفالدي، كارولات الكريسماس. من أجمل أماكن الموسيقى الكلاسيكية بأوروبا حجماً وجمالاً.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🍖</div>
+        <div>
+          <div class="dinner-name">Lokál Dlouhááá · Old Town</div>
+          <div class="dinner-desc">أفضل مطعم تشيكي أصيل — بيرة Pilsner Urquell مباشرة من البرميل، Svíčková (لحم بصلصة القشدة والتوت)، Svíčková بالزبدة. لا وجبة أفضل لأول ليلة بارغة. احجزوا قبل أسبوع.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٢</div>
+        <div class="day-info">
+          <div class="day-title">يوم القلعة والجسر الأسطوري</div>
+          <div class="day-date">الأربعاء · 2 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act star-p">
+        <div class="act-head">
+          <div class="act-name">⭐ جسر تشارلز عند الفجر (7:00 صباحاً)</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>هذا الوقت سر. في الصيف الجسر مكتظ 24 ساعة. في ديسمبر الساعة 7 صباحاً الجسر شبه خالٍ — ضباب خفيف على نهر Vltava، التماثيل الباروكية الـ30 مغطاة بالجليد، قلعة براغ في الخلفية تضيء ببطء. الأرومانسية أبلغ وأعمق من أي صورة.</p>
+        <div class="act-time">07:00 الجسر · 08:30 كافيه إفطار في Malá Strana</div>
+        <div class="fact"><strong>🥚 بيض في الجدران:</strong> بُني جسر تشارلز 1357م. الأسطورة تقول أضافوا بياض البيض للمونة لتقويتها — وبالفعل التحاليل الحديثة وجدت مواد عضوية في الجدران!</div>
+      </div>
+
+      <div class="act star-p">
+        <div class="act-head">
+          <div class="act-name">⭐ قلعة براغ (Prague Castle) — أكبر قلعة في العالم</div>
+          <span class="badge b-book">~80 ر / شخص</span>
+        </div>
+        <p>ليست قلعة — هي مدينة داخل مدينة! كاتدرائية Saint Vitus القوطية المذهلة، قصر القصص (Story of Prague Castle)، الزقاق الذهبي الصغير حيث كان يسكن الحراس والكيميائيون. في الثلج تبدو خيالية تماماً. خصصوا 3 ساعات.</p>
+        <div class="act-time">10:00 بوابة الدخول · 10:30 Saint Vitus Cathedral · 12:30 الزقاق الذهبي · 13:30 غداء بالقلعة</div>
+        <div class="fact"><strong>🏰 70,000 م²:</strong> قلعة براغ مدرجة في غينيس كأكبر قلعة قديمة في العالم من حيث المساحة. بناؤها استمر من القرن 9 حتى القرن 20!</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">حي Malá Strana (المدينة الصغيرة) وجسر تشارلز مساءً</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>حي بوهيمي بالكامل — محلات النبيذ، متاجر الزجاج البوهيمي الأشهر عالمياً، كافيهات في أقبية حجرية من القرن 16. في المساء عودوا للجسر — الأضواء تعكس على الماء والقلعة في الخلفية تبدو كلوحة.</p>
+        <div class="act-time">15:30 Malá Strana تسوق وتجوال · 17:30 جسر تشارلز مع الأضواء · 19:00 عشاء</div>
+      </div>
+
+
+      <div class="events-label">🎭 فعالية ديسمبر — اليوم الثاني</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot p"></div>
+          <div>
+            <div class="event-title">باليه كسارة البندق — The Nutcracker بالأوبرا الوطنية</div>
+            <div class="event-meta">ديسمبر 2026 · National Theatre أو State Opera · ~120–200 ر/شخص</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">تشايكوفسكي في قاعة أوبرا براغ الكلاسيكية — العرض السنوي الكلاسيكي لكسارة البندق. المبنى نفسه من 1881 تحفة معمارية. الملابس والديكور مذهلة. باريس 1775 تقدم الباليه في براغ كونغرس هذا الشهر أيضاً.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot p"></div>
+          <div>
+            <div class="event-title">حفل Smetana Hall — Prague Municipal House</div>
+            <div class="event-meta">طوال ديسمبر · ~100 ر/شخص · Art Nouveau hall من 1912</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">قاعة Smetana في Municipal House — أجمل قاعة Art Nouveau بأوروبا. حفلات أوركسترا تشيكية بأعمال Dvořák وSmetana وتشايكوفسكي في الموسم الشتوي. ابحثوا عن برنامج ديسمبر على موقع فيلهارمونية براغ.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🦆</div>
+        <div>
+          <div class="dinner-name">U Modré Kachničky (البطة الزرقاء) · Malá Strana</div>
+          <div class="dinner-desc">مطعم في قبو حجري من القرن 16. بط بالكرز، خنزير مشوي بالعسل والإكليل، ومرق الفطر الغابوي. أكل بوهيمي فاخر في أجواء لا توصف. احجزوا مسبقاً.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٣</div>
+        <div class="day-info">
+          <div class="day-title">يوم الفن والكريسماس الكامل</div>
+          <div class="day-date">الخميس · 3 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">متحف Alfons Mucha — فن Art Nouveau</div>
+          <span class="badge b-book">~35 ر / شخص</span>
+        </div>
+        <p>Mucha ابن براغ — ملصقاته تزين كل متحف في العالم. المتحف صغير (ساعة تكفي) لكن محتواه مذهل. نساء بشعر ذهبي وزهور وألوان آرت نوفو — ستفهمون لماذا يُقلّده الجميع.</p>
+        <div class="act-time">10:00 المتحف (ساعة ونص) · 12:00 غداء قريب</div>
+      </div>
+
+      <div class="act star-p">
+        <div class="act-head">
+          <div class="act-name">⭐ سوق كريسماس ساحة Náměstí Míru + Vinohrady</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>هذا السوق للسكان المحليين لا السياح. أصغر وأدفأ وأصدق. الأهالي يجلبون أطفالهم، الحرفيون يبيعون زجاجهم وخزفهم يدوياً، والأكل أطيب وأرخص بكثير من سوق Old Town. كوب Svařák وأنتم تتفرجون على الحياة البراغية الحقيقية.</p>
+        <div class="act-time">14:30 مترو لـVinohrady · 15:00 السوق حتى الغروب</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">ورشة زجاج بوهيمي (اختياري)</div>
+          <span class="badge b-book">~200 ر / ثنين</span>
+        </div>
+        <p>الزجاج البوهيمي من أشهر هدايا براغ في العالم. بعض الورش تسمح للزوار بتشكيل قطعتهم الخاصة بالنفخ — ذكرى فريدة تأخذونها معكم. رتّبوا مع الفندق مسبقاً.</p>
+        <div class="act-time">11:30 الورشة (ساعتين)</div>
+      </div>
+
+
+      <div class="events-label">🎭 فعالية ديسمبر — اليوم الثالث</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot p"></div>
+          <div>
+            <div class="event-title">حفل كارولات الكريسماس — St. Giles Church</div>
+            <div class="event-meta">كنيسة St. Giles القوطية · ~70 ر/شخص · ساعة ونص</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">كنيسة قوطية قلب Old Town — حفل كارولات تشيكية وعالمية بموسيقيين محترفين. الأجواء بالشموع والقبة الحجرية لا توصف. أحد أكثر الحفلات طلباً في براغ في ديسمبر.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🥩</div>
+        <div>
+          <div class="dinner-name">Eska · حي Žižkov العصري</div>
+          <div class="dinner-desc">أفضل مطعم معاصر في براغ — مطبخ تشيكي محدّث بمكونات محلية. خبز محلي من فرنهم، لحم مشوي على الفحم، حلويات مبتكرة. جيل براغ الجديد يأكل هنا.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٤</div>
+        <div class="day-info">
+          <div class="day-title">يوم التجوال الهادئ — براغ خارج السياحة</div>
+          <div class="day-date">الجمعة · 4 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act star-p">
+        <div class="act-head">
+          <div class="act-name">⭐ كافيه Café Savoy — إفطار Belle Époque</div>
+          <span class="badge b-book">~120 ر إفطار للاثنين</span>
+        </div>
+        <p>مقهى من 1893 بسقف مزخرف Art Nouveau بالكامل — أكثر مكان تصويراً في براغ بعد الجسر. إفطار فاخر: Eggs Benedict، ومعجنات طازجة، وقهوة فيينية كلاسيكية. احجزوا طاولة مسبقاً — يمتلئ الصباح.</p>
+        <div class="act-time">09:00 إفطار (ساعة ونص) · ثم تجوال Malá Strana الصباحي</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">حديقة Wallenstein + منظر Letná</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>حديقة Wallenstein الباروكية في الشتاء فيها طاووس حقيقي يتجول بين الثلج! بعدها حديقة Letná على التل — أفضل إطلالة بانورامية على براغ بالكامل. في ديسمبر الضباب والثلج يجعلانها كلوحة.</p>
+        <div class="act-time">11:30 Wallenstein (30 دقيقة) · 13:00 صعود Letná · 14:00 كافيه بالحديقة</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">Jewish Quarter (Josefov) — حي يهودي بتاريخ 1000 سنة</div>
+          <span class="badge b-book">~100 ر / شخص للمتاحف</span>
+        </div>
+        <p>أقدم وأكمل حي يهودي في أوروبا. 6 كنس (synagogues) من القرن 13 و16، مقبرة يهودية فيها 100,000 قبر متراكمة فوق بعضها لأن المساحة كانت محدودة — 12 طبقة من الرفات. تاريخ مؤثر جداً.</p>
+        <div class="act-time">15:30 Josefov · 17:30 تجوال حر</div>
+        <div class="fact"><strong>🕍 أقدم كنيس في أوروبا:</strong> كنيس Old-New Synagogue بُني 1270م ولا يزال يُستخدم للعبادة حتى اليوم — 750 سنة متواصلة!</div>
+      </div>
+
+
+      <div class="events-label">🎭 فعالية ديسمبر — اليوم الرابع</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot p"></div>
+          <div>
+            <div class="event-title">Souboj klavírů — ثنائي بيانو كوميدي وكلاسيكي</div>
+            <div class="event-meta">13 ديسمبر · Prague Congress Centre · ~70 ر/شخص</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">حفل فريد: بيانيستان يتنافسان على مسرح واحد — Beethoven لو كان متفائلاً؟ موسيقى كلاسيكية بروح فكاهية. يُقدَّم ردّ الفعل الجمهور كجزء من الحفل. تجربة مختلفة كلياً عن الحفلات الكلاسيكية التقليدية.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot p"></div>
+          <div>
+            <div class="event-title">جولة براغ المزينة بالثلج — Christmas Lights Walking Tour</div>
+            <div class="event-meta">يومياً · ~60 ر للاثنين · 2 ساعة مساءً</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">جولة مشي مرشدة بالليل تأخذكم للأزقة المضاءة والكنائس والأسواق الخفية. المرشد يروي قصص براغ في الشتاء وأساطير المدينة القديمة. أفضل طريقة لتوديع براغ.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🍷</div>
+        <div>
+          <div class="dinner-name">La Degustation Bohême Bourgeoise · Old Town</div>
+          <div class="dinner-desc">مطعم نجمة ميشلان واحدة — قائمة تذوق بوهيمية 7 أطباق. أغلى عشاء بالرحلة (~600 ر للاثنين) لكن تجربة فريدة. احجزوا شهراً مسبقاً على الأقل.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٥</div>
+        <div class="day-info">
+          <div class="day-title">وداع براغ — آخر صباح على الجسر</div>
+          <div class="day-date">السبت · 5 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">صباح حر — تسوق وكافيه أخير</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>آخر صباح في براغ. مشي على الجسر مرة أخيرة في الضباح الصباحي. تسوق من Rott Crystal للزجاج البوهيمي، مجوهرات الغرانيت البوهيمي، أو شوكولاتة CHOCO STORY كهدايا.</p>
+        <div class="act-time">08:00 جسر تشارلز الصباحي · 09:30 تسوق هدايا · 11:30 تشيك أوت</div>
+      </div>
+
+      <div class="act star-p">
+        <div class="act-head">
+          <div class="act-name">⭐ قطار براغ → فيينا (Railjet)</div>
+          <span class="badge b-book">~200–350 ر للاثنين</span>
+        </div>
+        <p>قطار Railjet الفاخر — 4 ساعات عبر الريف التشيكي والنمساوي المكسو بالثلج. مريح جداً، واجهة إطلالة واسعة. أجمل رحلة قطار بأوروبا الوسطى في الشتاء. الوصول لفيينا الساعة 4–5 مساءً.</p>
+        <div class="act-time">13:00 Praha hlavní nádraží · 17:00 Wien Hauptbahnhof</div>
+        <div class="fact"><strong>🚂 نصيحة:</strong> احجزوا مقاعد First Class — الفرق ~80 ر فقط وتحصلون على مقاعد جلد واسعة وخدمة طعام. تجربة رحلة لا القطار فقط.</div>
+      </div>
+    </div>
+
+  </div><!-- end content prague -->
+</section>
+
+<hr class="city-divider">
+
+<!-- ═══════════════ VIENNA ═══════════════ -->
+<section class="city-section" id="vienna">
+  <div style="position:relative;">
+    <img class="city-hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Wien_Karlskirche_abends.jpg/1920px-Wien_Karlskirche_abends.jpg"
+      onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Vienna_-_Schoenbrunn_Palace_-_0835.jpg/1920px-Vienna_-_Schoenbrunn_Palace_-_0835.jpg'" alt="فيينا">
+    <div class="city-overlay">
+      <div class="city-tag v">المحطة الثانية · STOP II</div>
+      <h2>فيينا</h2>
+      <div class="city-stats">
+        <span>🌡 2–6°م</span>
+        <span>📅 6–11 ديسمبر</span>
+        <span>🏨 5 ليالٍ</span>
+        <span>🎻 عاصمة الموسيقى الكلاسيكية</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- HOTEL VIENNA -->
+    <div class="hotel-block">
+      <img class="hotel-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/1_vienna_aerial_view_hochhaus_2011.jpg/1280px-1_vienna_aerial_view_hochhaus_2011.jpg" alt="فيينا فندق">
+      <div class="hotel-body">
+        <div class="hotel-tag v">★ الترشيح الأول — سويت كاملة</div>
+        <h3>The Amauris Vienna — Relais & Châteaux</h3>
+        <div class="hotel-sub">5★ · Ringstraße · بين Musikverein والأوبرا مباشرة</div>
+        <div class="hotel-price v">~1,600 ر / ليلة · ~8,800 ر (5 ليالٍ)</div>
+        <p>Corner Suite — غرفة نوم منفصلة + صالة معيشة كاملة + حمام فاخر بحوض وشاور. الموقع لا يُضاهى: خطوات من Musikverein وأوبرا فيينا والـRingstraße الإمبراطورية. تصميم داخلي بطابع فيناوي أصيل مع لمسات معاصرة. سبا وبركة سباحة داخلية بالفندق.</p>
+        <p>عند الحجز اذكر "شهر العسل" — يرتّبون إضاءة خاصة وورود وشوكولاتة فيينية.</p>
+        <div class="tip">💡 خيار ساحر: <strong>Rosewood Vienna</strong> — St. Peter's Suite بغرفة نوم + صالة + إطلالة مباشرة على كنيسة Peterskirche بـ~2,200 ر/ليلة. أو للتجربة الإمبراطورية الكاملة: <strong>Grand Suite في قصر شونبرون نفسه</strong> — تنامون داخل القصر الإمبراطوري فعلياً بـ~3,500 ر/ليلة.</div>
+      </div>
+    </div>
+
+    <div class="days-header">الجدول اليومي · 5 أيام في فيينا</div>
+
+    <!-- DAY 6 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٦</div>
+        <div class="day-info">
+          <div class="day-title">يوم الوصول — أجمل سوق كريسماس بالعالم</div>
+          <div class="day-date">الأحد · 6 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act star-v">
+        <div class="act-head">
+          <div class="act-name">⭐ Rathausplatz Christkindlmarkt — أشهر سوق كريسماس في العالم</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>يفتح من 15 نوفمبر حتى 26 ديسمبر. أمام قصر البلدية القوطي الضخم — 150 كشك أمام واجهة مضاءة بـ300,000 مصباح. الجليد يتساقط أحياناً وأنتم تمشون بين الكشك والكشك. Glühwein (نبيذ ساخن فيناوي)، Maroni (كستناء مشوية)، Vanillekipferl (بسكويت الفانيلا الهلالي). الأجواء التي وصفتها الصور ثلاث مرات — لكن العيش فيها مختلف تماماً.</p>
+        <div class="act-time">17:30 وصول السوق بعد التشيك إن · 18:00 إضاءة كاملة · 20:00 عشاء</div>
+        <div class="fact"><strong>🎄 500 سنة تقليد:</strong> أسواق الكريسماس الفيينية تقليد يمتد لـ700+ سنة! أول سوق رُسمي موثّق في فيينا كان عام 1298م في عهد الهابسبورغ.</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">كاتدرائية Saint Stephen (Stephansdom)</div>
+          <span class="badge b-free">مجاني من الخارج</span>
+        </div>
+        <p>الأيقونة الفيينية — سقف من البلاط الملوّن بأنماط هندسية رائعة. في الليل مضاءة بطريقة تجعلها تبدو كرسمة. قبل الدخول قفوا في Stephansplatz ونظروا للأعلى.</p>
+        <div class="act-time">بعد السوق · دقائق فقط</div>
+      </div>
+
+
+      <div class="events-label v">🎭 فعالية فيينا — ليلة الوصول</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Advent with Elīna Garanča — مذهلة الأوبرا العالمية</div>
+            <div class="event-meta">10 ديسمبر · Konzerthaus · ~200–300 ر/شخص · احجزوا مسبقاً</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">Elīna Garanča من أعظم مغنيات الميتزو سوبرانو في العالم — مع ORF Radio Symphony Orchestra وWiener Singakademie. حفل Advent خاص يُقدَّم مرة واحدة فقط كل موسم. نادر وجميل.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Classic Ensemble Vienna — كنيسة St. Peter's</div>
+            <div class="event-meta">يومياً ديسمبر · ~80 ر/شخص · موتزارت وفيفالدي وبيتهوفن</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">كنيسة باروكية من القرن 17 في قلب فيينا — Classic Ensemble Vienna يعزف يومياً تقريباً في ديسمبر. موتزارت في المكان الذي عاش فيه. الحجز متاح على الموقع أو عند الباب.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🥩</div>
+        <div>
+          <div class="dinner-name">Figlmüller Bäckerstraße · Old Town</div>
+          <div class="dinner-desc">أشهر Wiener Schnitzel في فيينا منذ 1905 — شريحة لحم العجل المقرمشة بحجم أكبر من الطبق! الطابور دليل على الجودة. اوصلوا قبل 7 مساءً أو احجزوا.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٧</div>
+        <div class="day-info">
+          <div class="day-title">يوم الإمبراطورية — قصر وفن</div>
+          <div class="day-date">الاثنين · 7 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act star-v">
+        <div class="act-head">
+          <div class="act-name">⭐ قصر شونبرون (Schönbrunn Palace) + سوق كريسماسه الخاص</div>
+          <span class="badge b-book">~80 ر / شخص</span>
+        </div>
+        <p>1,441 غرفة، حدائق بامتداد بصري لا ينتهي، وسوق كريسماس في الفناء الخارجي يختلف كلياً عن Rathausplatz — أكثر هدوءاً، أفخم أكل، وموسيقى كلاسيكية حية. في الثلج الواجهة الصفراء تبدو كصورة من كتاب حكايات. الجولة الصوتية (40 غرفة) تروي قصص Maria Theresa وFranz Joseph وSisi.</p>
+        <div class="act-time">09:30 دخول القصر · 12:00 حدائق + سوق كريسماس القصر · 14:00 غداء بالمكان</div>
+        <div class="fact"><strong>👑 المرأة الأقوى:</strong> ماريا تيريزا حكمت 40 سنة وأنجبت 16 طفلاً — من بينهم Marie Antoinette ملكة فرنسا. كانت تعقد اجتماعات دولة وهي تضع مولوداً!</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">Kunsthistorisches Museum — أعظم متحف فن في أوروبا الوسطى</div>
+          <span class="badge b-book">~40 ر / شخص</span>
+        </div>
+        <p>Vermeer، Rembrandt، Raphael، Caravaggio — مجموعة الهابسبورغ الشخصية. المبنى نفسه تحفة — قبة مذهبة، دراج رخامي، نقوش جدارية من Klimt نفسه! ساعتان تكفيان للأقسام الرئيسية.</p>
+        <div class="act-time">15:30–17:30 المتحف</div>
+      </div>
+
+
+      <div class="events-label v">🎭 فعالية فيينا — اليوم السابع</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Schönbrunn Palace Orchestra — حفل في قصر شونبرون</div>
+            <div class="event-meta">يومياً · Orangery Schönbrunn · ~120 ر/شخص · موتزارت وشتراوس</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">في Orangery شونبرون — أكبر بيت دفيئة في أوروبا تحوّل لقاعة حفلات في الشتاء. أوركسترا القصر مع مغنيين أوبراليين وراقصي باليه بأزياء إمبراطورية. يجمعون قصر شونبرون وموسيقى موتزارت وشتراوس في ليلة واحدة.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Vienna State Opera — الموسم الشتوي</div>
+            <div class="event-meta">طوال ديسمبر · Wiener Staatsoper · ~100–400 ر/شخص</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">أعرق دور الأوبرا في العالم — موسم ديسمبر يتضمن عادةً Die Fledermaus (خفاش شتراوس) أو The Magic Flute لموتزارت. حتى تذاكر الوقوف في المؤخرة (~10 يورو) تجربة لا تُنسى في هذا المبنى.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🎂</div>
+        <div>
+          <div class="dinner-name">Café Central · Herrengasse</div>
+          <div class="dinner-desc">مقهى من 1876 — هنا جلس Freud وTrotsky وHitler الشاب قبل السياسة! قبة ضخمة، موسيقى بيانو حية، كعكة Sachertorte الأصلية. عشاء خفيف + حلويات فيينية. التجربة الأيقونية.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 8 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٨</div>
+        <div class="day-info">
+          <div class="day-title">يوم الموسيقى والأحياء المخفية</div>
+          <div class="day-date">الثلاثاء · 8 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act star-v">
+        <div class="act-head">
+          <div class="act-name">⭐ حفل موسيقى كلاسيكي في Musikverein أو Konzerthaus</div>
+          <span class="badge b-book">~200–400 ر للاثنين</span>
+        </div>
+        <p>Musikverein هو القاعة الذهبية الأشهر في العالم — الصوتيات معجزة، الديكور مذهّب بالكامل، والأوركسترا الفيينية تعزف في ديسمبر برامج خاصة للميلاد. تلبسون أنيق وتستمتعون بساعتين من Beethoven أو Mozart في مهد موسيقاهم. هذا ما يُميّز فيينا عن كل المدن.</p>
+        <div class="act-time">19:30 الحفل (احجزوا قبل شهرين) · قبله عشاء خفيف في الكافيه المجاور</div>
+        <div class="fact"><strong>🎻 صوتيات لا تُصدق:</strong> Musikverein صُمّم 1870 بصوتيات خاصة لا يفهم المهندسون سرها لليوم. يُصنّف دائماً الأفضل صوتياً في العالم مع Carnegie Hall.</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">حي Naschmarkt + Spittelberg (سوق كريسماس المحلي)</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>Naschmarkt أكبر سوق مفتوح في فيينا — بهارات، زيتون، جبن، ومأكولات من 50 دولة. بعدها حي Spittelberg الصغير — أجمل سوق كريسماس محلي في فيينا، حيث الحرفيون يبيعون أعمالهم اليدوية فقط. السكان يفضلونه على Rathausplatz.</p>
+        <div class="act-time">10:30 Naschmarkt · 12:30 غداء في السوق · 14:30 Spittelberg</div>
+      </div>
+
+
+      <div class="events-label v">🎭 فعالية فيينا — اليوم الثامن</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Christmas in Vienna Gala — Wiener Konzerthaus</div>
+            <div class="event-meta">16–17 ديسمبر · Konzerthaus (Great Hall) · ~250–400 ر/شخص</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">حفل الجالا السنوي الأشهر — Vienna Boys Choir + Wiener Singakademie + ORF Radio Symphony Orchestra. يُبَثّ على التلفزيون الأوروبي. كارولات عالمية من Bach وMozart حتى Silent Night. احجزوا فوراً — يُباع قبل أشهر. أنتم في فيينا 6–11 ديسمبر لكن عروض مجاورة متاحة.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Four Seasons بكنيسة Karlskirche — Orchestra 1756</div>
+            <div class="event-meta">طوال ديسمبر · Karlskirche · ~90 ر/شخص</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">فيفالدي "الفصول الأربعة" في كنيسة Karlskirche الباروكية المذهلة على Karlsplatz — Orchestra 1756 يعزف عروضاً منتظمة ليلية. الصوتيات ومنظر الكنيسة يجعلان فيفالدي تجربة مختلفة كلياً.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🐟</div>
+        <div>
+          <div class="dinner-name">Steirereck im Stadtpark · Stadtpark</div>
+          <div class="dinner-desc">واحد من أفضل 50 مطعم في العالم — في قلب حديقة المدينة. أكل نمساوي إبداعي بمكونات محلية. قائمة تذوق 6 أطباق ~800 ر للاثنين. احجزوا شهراً مسبقاً. العشاء الكبير لرحلتكم.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 9 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">٩</div>
+        <div class="day-info">
+          <div class="day-title">يوم المتاحف والكافيهات التاريخية</div>
+          <div class="day-date">الأربعاء · 9 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">متحف Belvedere — لوحة "القبلة" لـKlimt</div>
+          <span class="badge b-book">~40 ر / شخص</span>
+        </div>
+        <p>لوحة "القبلة" لـGustav Klimt — الأكثر تصويراً في تاريخ الفن. رجل وامرأة في عناق ذهبي بأسلوب Art Nouveau لا مثيل له. رأيتها في ألف صورة — رؤيتها مباشرة تجربة مختلفة كلياً. القصر نفسه باروكي فاخر مع حدائق مكسوة بالثلج.</p>
+        <div class="act-time">10:00 Upper Belvedere · 12:30 حدائق القصر · 13:30 غداء</div>
+        <div class="fact"><strong>💛 الذهب الحقيقي:</strong> Klimt استخدم ورق ذهب حقيقي في لوحة القبلة — 24 قيراطاً! اللوحة تغيّر لونها حسب زاوية الإضاءة.</div>
+      </div>
+
+      <div class="act star-v">
+        <div class="act-head">
+          <div class="act-name">⭐ جولة كافيهات تاريخية — ثلاثة مقاهٍ تاريخية في يوم</div>
+          <span class="badge b-free">~150 ر للاثنين</span>
+        </div>
+        <p>الكافيه الفيناوي ليس مكان شرب قهوة — هو مؤسسة ثقافية مدرجة في اليونسكو. ثلاثة مقاهٍ لا تفوتوا: Café Schwarzenberg (1861، أقدم قائم)، Café Landtmann (1873، مقهى Freud المفضل)، Café Mozart (1794، أمام الأوبرا). في كل واحد اطلبوا Melange (قهوة فيينية) + Apfelstrudel.</p>
+        <div class="act-time">15:00–19:00 جولة المقاهي الثلاثة</div>
+        <div class="fact"><strong>☕ ثقافة معترف بها:</strong> اليونسكو أدرجت "ثقافة الكافيه الفيناوي" في قائمة التراث الثقافي غير المادي للإنسانية. المقهى التاريخي في فيينا ليس مطعماً — هو طريقة حياة.</div>
+      </div>
+
+
+      <div class="events-label v">🎭 فعالية فيينا — اليوم التاسع</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Wiener Kaiserquartett — Kapuzinerkirche (كنيسة الكبوشيين)</div>
+            <div class="event-meta">نوفمبر–ديسمبر · ~70 ر/شخص · رباعي وتري كلاسيكي</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">الكنيسة التي فيها مقابر الإمبراطورية الهابسبورغية — رباعي وتري يعزف موسيقى موسمية. الأجواء بين أضرحة الإمبراطور فرانز جوزيف وماريا تيريزا شيء لا يصفه وصف.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Swinging Christmas — Gerhard Aflenzer Broadway Big Band</div>
+            <div class="event-meta">12 ديسمبر · ~100 ر/شخص · جاز وكريسماس</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">للراغبين في تنوع عن الكلاسيكي — Big Band فيناوي يعزف كريسماس بأسلوب Broadway Jazz. خفيف وممتع ومختلف عن كل ما سمعتموه بالرحلة.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🥗</div>
+        <div>
+          <div class="dinner-name">Meixner's Gastwirtschaft · حي Hietzing</div>
+          <div class="dinner-desc">مطعم عائلي من 1932 يبعد عن السياح. Tafelspitz (لحم عجل مسلوق بالخضار والمرق) — الطبق الوطني الفيناوي الحقيقي. بسيط، دافئ، أصيل.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 10 -->
+    <div class="day">
+      <div class="day-head">
+        <div class="day-num">١٠</div>
+        <div class="day-info">
+          <div class="day-title">آخر يوم — وداع إمبراطوري</div>
+          <div class="day-date">الخميس · 10 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">قصر Hofburg — بيت الهابسبورغ الكبير</div>
+          <span class="badge b-book">~70 ر / شخص</span>
+        </div>
+        <p>القصر الذي أدار إمبراطورية 600 سنة. متحف Sisi (الإمبراطورة Elisabeth) — شعرها الطويل الشهير وحزامها الـ51 سم وعملية اغتيالها. Imperial Apartments — غرف الإمبراطور Franz Joseph بأثاثها الأصلي. الخزينة الإمبراطورية — تاج الإمبراطورية المقدسة من 962م.</p>
+        <div class="act-time">09:30 Hofburg (ثلاث ساعات) · 12:30 غداء في Café Palmenhaus المجاور</div>
+        <div class="fact"><strong>⚖️ 600 سنة حكم:</strong> الهابسبورغ حكموا فيينا وأوروبا 640 سنة متواصلة (1278–1918). آخر إمبراطور Karl I نُفي عام 1918 وتوفي في المنفى عمره 34 سنة.</div>
+      </div>
+
+      <div class="act star-v">
+        <div class="act-head">
+          <div class="act-name">⭐ Rathausplatz آخر ليلة — وداع السوق</div>
+          <span class="badge b-free">مجاني</span>
+        </div>
+        <p>عودوا لسوق Rathausplatz آخر مرة. اشتروا هدايا Advent calendars، سيراميك فيناوي، وعلب Mozartkugeln (كرات الشوكولاتة الموزارتية). كوب Glühwein الأخير أمام القصر المضاء — ختام رحلة لن تُنسى.</p>
+        <div class="act-time">16:30 السوق · 18:30 تسوق هدايا · 20:00 عشاء الوداع</div>
+      </div>
+
+
+      <div class="events-label v">🎭 فعالية فيينا — الليلة الأخيرة</div>
+      <div class="events-strip">
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">Spanish Riding School — Lipizzaner عرض الخيول الإمبراطورية</div>
+            <div class="event-meta">مواعيد محددة · Hofburg · ~120 ر/شخص · حجز مسبق ضروري</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">خيول Lipizzaner البيضاء ترقص لموسيقى كلاسيكية في قاعة الباروك الإمبراطورية منذ 1572! فرسان بزي تاريخي، حركات بهلوانية مذهلة، وتراث حي 450 سنة. الأكثر خصوصية من بين الفعاليات الفيينية. احجزوا على الموقع الرسمي مسبقاً.</div>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-dot v"></div>
+          <div>
+            <div class="event-title">حفل Mozart في Mozarthaus Vienna</div>
+            <div class="event-meta">يومياً · ~80 ر/شخص · يشمل دخول متحف موتزارت</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">الشقة الوحيدة المتبقية التي سكن فيها موتزارت في فيينا — تحوّلت لمتحف وقاعة حفلات. Wiener Ensemble يعزف موتزارت في المكان الذي ألّف فيه! السعر يشمل جولة المتحف.</div>
+          </div>
+        </div>
+      </div>
+      <div class="dinner">
+        <div class="dinner-icon">🕯</div>
+        <div>
+          <div class="dinner-name">Zum Wohl · Bognergasse</div>
+          <div class="dinner-desc">مطعم نبيذ صغير وحميمي — 200 خيار نبيذ نمساوي، مع أكل Bistronomie بسيط وممتاز. آخر عشاء يليق بالمدينة التي بدّلت نظرتكم للأوروبا في الشتاء.</div>
+        </div>
+      </div>
+
+      <div class="transit">
+        ✈️ <strong>الجمعة 11 ديسمبر:</strong> تاكسي أو مترو U3 للمطار Wien Schwechat (~25 دقيقة). طيران مباشر لمطار الرياض أو جدة. عمر مديد وزواج مبارك! 🤍
+      </div>
+    </div>
+
+  </div><!-- end content vienna -->
+</section>
+
+<!-- CHECKLIST -->
+<div class="checklist-section" id="booking">
+  <div class="section-h2">جدول الحجوزات</div>
+  <div class="section-sub" style="margin-bottom:36px;">رتّبها حسب الأولوية — اضغط على الدائرة عند الإنجاز</div>
+
+  <div class="cl-group">
+    <div class="cl-group-title">🔴 الحين فوراً</div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">تذاكر الطيران — الرياض ← براغ | فيينا → الرياض</div>
+        <div class="cl-urgency urg-now">ديسمبر موسم عالٍ جداً — ارتفاع الأسعار مضمون</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">تأشيرة شنغن (تشمل التشيك والنمسا)</div>
+        <div class="cl-urgency urg-now">15–45 يوم معالجة — تقدّموا بأقرب وقت</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">حجز الفنادق (براغ + فيينا)</div>
+        <div class="cl-urgency urg-now">ديسمبر يمتلئ مبكراً بسبب أسواق الكريسماس</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cl-group">
+    <div class="cl-group-title">🟡 قبل شهرين</div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">حفل Musikverein أو Konzerthaus فيينا</div>
+        <div class="cl-urgency urg-soon">حفلات ديسمبر تُباع في أكتوبر</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">مطعم La Degustation براغ (ميشلان)</div>
+        <div class="cl-urgency urg-soon">الحجز يمتد لشهرين مسبقاً</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">مطعم Steirereck فيينا (أفضل 50 عالمياً)</div>
+        <div class="cl-urgency urg-soon">شهر إلى شهرين مسبقاً</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">قطار Railjet براغ → فيينا (First Class)</div>
+        <div class="cl-urgency urg-soon">الحجز المبكر يوفر ~50%</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cl-group">
+    <div class="cl-group-title">🟢 قبل أسبوعين</div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">تذاكر قلعة براغ</div>
+        <div class="cl-urgency urg-ok">متاحة لكن الحجز يريحكم</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">تذاكر قصر شونبرون فيينا</div>
+        <div class="cl-urgency urg-ok">أونلاين يتجنب الطابور</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">تذاكر Belvedere (لوحة القبلة)</div>
+        <div class="cl-urgency urg-ok">تنفد في عطل الكريسماس</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">مطعم U Modré Kachničky براغ</div>
+        <div class="cl-urgency urg-ok">مطعم صغير ومطلوب</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">Café Savoy براغ (إفطار)</div>
+        <div class="cl-urgency urg-ok">يمتلئ الصباح بسرعة</div>
+      </div>
+    </div>
+
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
+        <div class="cl-text">تأمين سفر شنغن (€30,000 كحد أدنى)</div>
+        <div class="cl-urgency urg-ok">شرط للتأشيرة</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  شهر عسل مبارك · <span class="p">براغ</span> و<span class="v">فيينا</span> · ديسمبر 2026 · بالتوفيق والسعادة 🤍
+</footer>
+
+<script>
+
+// Countdown timers
+function updateCountdowns() {
+  const now = new Date();
+
+  // Wedding: 27 Nov 2026 20:00 local
+  const wedding = new Date('2026-11-27T20:00:00');
+  // Travel: 1 Dec 2026 08:00 local
+  const travel  = new Date('2026-12-01T08:00:00');
+
+  function setTimer(prefix, target) {
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById(prefix+'-days').textContent  = '00';
+      document.getElementById(prefix+'-hours').textContent = '00';
+      document.getElementById(prefix+'-mins').textContent  = '00';
+      document.getElementById(prefix+'-secs').textContent  = '00';
+      return;
+    }
+    const days  = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins  = Math.floor((diff % 3600000)  / 60000);
+    const secs  = Math.floor((diff % 60000)    / 1000);
+    document.getElementById(prefix+'-days').textContent  = String(days).padStart(2,'0');
+    document.getElementById(prefix+'-hours').textContent = String(hours).padStart(2,'0');
+    document.getElementById(prefix+'-mins').textContent  = String(mins).padStart(2,'0');
+    document.getElementById(prefix+'-secs').textContent  = String(secs).padStart(2,'0');
+  }
+
+  setTimer('wd', wedding);
+  setTimer('tr', travel);
+}
+
+updateCountdowns();
+setInterval(updateCountdowns, 1000);
+
+// Snowflakes animation
+const canvas = document.getElementById('snowCanvas');
+const ctx = canvas.getContext('2d');
+let flakes = [];
+
+function resize() {
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+for (let i = 0; i < 80; i++) {
+  flakes.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 2.5 + 0.5,
+    speed: Math.random() * 0.6 + 0.2,
+    drift: Math.random() * 0.4 - 0.2,
+    opacity: Math.random() * 0.5 + 0.1
+  });
+}
+
+function drawSnow() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  flakes.forEach(f => {
+    ctx.beginPath();
+    ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(240,238,233,${f.opacity})`;
+    ctx.fill();
+    f.y += f.speed;
+    f.x += f.drift;
+    if (f.y > canvas.height) { f.y = -5; f.x = Math.random() * canvas.width; }
+    if (f.x > canvas.width) f.x = 0;
+    if (f.x < 0) f.x = canvas.width;
+  });
+  requestAnimationFrame(drawSnow);
+}
+drawSnow();
+
+// Nav scroll
+document.querySelectorAll('nav a').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
