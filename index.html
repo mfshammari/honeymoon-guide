@@ -686,6 +686,22 @@ nav a.vienna { color: var(--vienna); }
 }
 .events-label.v { color: var(--vienna); }
 
+/* ── TREND BOX ── */
+.trend-box { border:1px solid var(--border); border-radius:3px; background:rgba(255,255,255,0.02); padding:22px 24px; margin-bottom:44px; }
+.trend-head { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.trend-head h4 { font-family:'Cormorant Garamond',serif; font-size:24px; font-weight:400; color:var(--snow); }
+.trend-tag { font-size:9px; letter-spacing:.15em; text-transform:uppercase; padding:3px 8px; border-radius:2px; background:rgba(212,175,106,.12); color:var(--gold); }
+.trend-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+@media(max-width:640px){ .trend-grid{ grid-template-columns:1fr; } .trend-box{ padding:16px 14px; } }
+.trend-item { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:12px 14px; }
+.trend-item .t-name { font-size:13.5px; font-weight:700; color:var(--snow); display:flex; justify-content:space-between; gap:8px; align-items:flex-start; }
+.trend-item .t-desc { font-size:12.5px; color:var(--text); margin-top:4px; line-height:1.65; }
+.t-pill { font-size:9px; letter-spacing:.1em; text-transform:uppercase; padding:2px 7px; border-radius:2px; white-space:nowrap; flex-shrink:0; }
+.pill-ig { background:rgba(200,80,140,.15); color:#E07AB0; }
+.pill-halal { background:rgba(100,200,120,.12); color:#6DC87A; }
+.pill-sa { background:rgba(123,158,196,.15); color:var(--vienna); }
+.halal-note { display:inline-block; font-size:10px; color:#6DC87A; margin-right:6px; }
+
 /* ── LATE BANNER ── */
 .late-banner {
   display: flex; align-items: center; gap: 18px;
@@ -1013,6 +1029,20 @@ footer span.v { color: var(--vienna); }
       </div>
     </div>
 
+    <div class="trend-box">
+      <div class="trend-head"><h4>ترند براغ هذا الشتاء</h4><span class="trend-tag">انستقرام · تيك توك · سعوديين</span></div>
+      <div class="trend-grid">
+      <div class="trend-item"><div class="t-name"><span>Habibi Prague · Na Příkopě 23</span><span class="t-pill pill-halal">حلال 100%</span></div><div class="t-desc">المطعم الوحيد في براغ حلال بالكامل وبدون كحول — لبناني، مشاوي وشاورما، وشيشة. 5 دقائق من ساحة Old Town. ملجأكم لو تعبتم من الأكل التشيكي.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Galata · Opletalova 20</span><span class="t-pill pill-halal">حلال · تركي</span></div><div class="t-desc">أفضل تركي في براغ بتقييم Google — كباب وبيدا وشوربات ساخنة. مناسب للغداء بعد القلعة.</div></div>
+      <div class="trend-item"><div class="t-name"><span>رأس كافكا الدوّار · Quadrio</span><span class="t-pill pill-ig">تيك توك</span></div><div class="t-desc">تمثال من 42 طبقة معدنية تدور وتتفكك كل ساعة — أكثر فيديو يُصوَّر في براغ. مجاني، أمام مول Quadrio.</div></div>
+      <div class="trend-item"><div class="t-name"><span>مكتبة دير Strahov</span><span class="t-pill pill-ig">انستقرام</span></div><div class="t-desc">أجمل مكتبة باروكية في العالم — القاعة الفلسفية بسقفها المرسوم. تصوير من الباب فقط، والممر خلفها يعطي أجمل إطلالة على براغ وقت الغروب.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Glass Bar · البيت الراقص</span><span class="t-pill pill-ig">زاوية تصوير</span></div><div class="t-desc">بار على سطح Dancing House — إطلالة 360° على النهر والقلعة. كوب شوكولاتة ساخنة بـ~30 ر وصورة لا تُعوَّض.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Trdelník في Good Food · Karlova</span><span class="t-pill pill-ig">تيك توك</span></div><div class="t-desc">المعجنة الحلزونية اللي كسرت الإنترنت — هنا يحشونها بالآيس كريم أو الشوكولاتة. الطابور طويل والصورة تستحق.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Pařížská Street</span><span class="t-pill pill-sa">سعوديين</span></div><div class="t-desc">شارع الماركات (Louis Vuitton، Dior، Cartier) بين Old Town والحي اليهودي — الأسعار أقل من دبي بسبب الضريبة المستردة (Tax Free 15%).</div></div>
+      <div class="trend-item"><div class="t-name"><span>Café Louvre · Národní</span><span class="t-pill pill-ig">انستقرام</span></div><div class="t-desc">مقهى 1902 بسقوفه الوردية — جلس فيه أينشتاين وكافكا. الإفطار هنا بديل لـCafé Savoy لو امتلأ.</div></div>
+      </div>
+    </div>
+
     <div class="days-header">الجدول اليومي · 6 أيام في براغ</div>
 
     <!-- DAY 1 -->
@@ -1068,7 +1098,7 @@ footer span.v { color: var(--vienna); }
         <div class="dinner-icon">🍖</div>
         <div>
           <div class="dinner-name">Lokál Dlouhááá · Old Town</div>
-          <div class="dinner-desc">أفضل مطعم تشيكي أصيل — بيرة Pilsner Urquell مباشرة من البرميل، Svíčková (لحم بصلصة القشدة والتوت)، Svíčková بالزبدة. لا وجبة أفضل لأول ليلة بارغة. احجزوا قبل أسبوع.</div>
+          <div class="dinner-desc"><span class="halal-note">▲ فيه خنزير بالقائمة</span>أفضل مطعم تشيكي أصيل — اطلبوا Svíčková (لحم بقر بصلصة القشدة والتوت) أو Guláš بقري. بديل حلال كامل لأول ليلة: <strong>Habibi Prague</strong> على بعد 5 دقائق. احجزوا قبل أسبوع.</div>
         </div>
       </div>
     </div>
@@ -1183,7 +1213,7 @@ footer span.v { color: var(--vienna); }
         <div class="dinner-icon">🦆</div>
         <div>
           <div class="dinner-name">U Modré Kachničky (البطة الزرقاء) · Malá Strana</div>
-          <div class="dinner-desc">مطعم في قبو حجري من القرن 16. بط بالكرز، خنزير مشوي بالعسل والإكليل، ومرق الفطر الغابوي. أكل بوهيمي فاخر في أجواء لا توصف. احجزوا مسبقاً.</div>
+          <div class="dinner-desc"><span class="halal-note">▲ اطلبوا البط أو السمك</span>مطعم في قبو حجري من القرن 16. بط بالكرز، سمك الكارب البوهيمي، ومرق الفطر الغابوي. أكل بوهيمي فاخر في أجواء لا توصف. احجزوا مسبقاً.</div>
         </div>
       </div>
     </div>
@@ -1390,6 +1420,20 @@ footer span.v { color: var(--vienna); }
         <p>Corner Suite — غرفة نوم منفصلة + صالة معيشة كاملة + حمام فاخر بحوض وشاور. الموقع لا يُضاهى: خطوات من Musikverein وأوبرا فيينا والـRingstraße الإمبراطورية. تصميم داخلي بطابع فيناوي أصيل مع لمسات معاصرة. سبا وبركة سباحة داخلية بالفندق.</p>
         <p>عند الحجز اذكر "شهر العسل" — يرتّبون إضاءة خاصة وورود وشوكولاتة فيينية.</p>
         <div class="tip">💡 خيار ساحر: <strong>Rosewood Vienna</strong> — St. Peter's Suite بغرفة نوم + صالة + إطلالة مباشرة على كنيسة Peterskirche بـ~2,200 ر/ليلة. أو للتجربة الإمبراطورية الكاملة: <strong>Grand Suite في قصر شونبرون نفسه</strong> — تنامون داخل القصر الإمبراطوري فعلياً بـ~3,500 ر/ليلة.</div>
+      </div>
+    </div>
+
+    <div class="trend-box">
+      <div class="trend-head"><h4>ترند فيينا هذا الشتاء</h4><span class="trend-tag">انستقرام · تيك توك · سعوديين</span></div>
+      <div class="trend-grid">
+      <div class="trend-item"><div class="t-name"><span>Habibi & Hawara · Wipplingerstraße</span><span class="t-pill pill-halal">حلال · ترند</span></div><div class="t-desc">أشهر مطعم شامي في فيينا — فريقه من لاجئين سوريين، أكل بيتي راقٍ بتقديم عصري. محجوز دائماً، احجزوا قبل أسبوع.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Kent Restaurant · Brunnenmarkt</span><span class="t-pill pill-halal">حلال · تركي</span></div><div class="t-desc">المطعم التركي الأصلي للفيينيين — مفتوح 24 ساعة، أسعار ممتازة، وأكبر إفطار تركي في المدينة. 10 دقائق مترو.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Vollpension · Schleifmühlgasse</span><span class="t-pill pill-ig">تيك توك</span></div><div class="t-desc">جدّات فيينيات يخبزن الكيك أمامكم ويحكين قصصهن — أكثر كافيه يُصوَّر في فيينا. احجزوا، صغير ويمتلئ.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Café Demel · Kohlmarkt</span><span class="t-pill pill-ig">انستقرام</span></div><div class="t-desc">الحلواني الإمبراطوري من 1786 — واجهة الكيك الزجاجية وصنّاع الحلى يشتغلون خلف الزجاج. كعكة Sacher الأصلية الثانية (المنافس التاريخي).</div></div>
+      <div class="trend-item"><div class="t-name"><span>Lamée Rooftop · Rotenturmstraße</span><span class="t-pill pill-ig">زاوية تصوير</span></div><div class="t-desc">سطح فندق Lamée — كاتدرائية Stephansdom على بعد أمتار، أجمل إطلالة ليلية في فيينا بكوب شوكولاتة ساخنة.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Strudlhofstiege · Alsergrund</span><span class="t-pill pill-ig">انستقرام</span></div><div class="t-desc">درج Art Nouveau مزيّن بالثلج — زاوية التصوير الأكثر هدوءاً في فيينا، بلا سياح.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Parndorf Outlet (McArthurGlen)</span><span class="t-pill pill-sa">سعوديين</span></div><div class="t-desc">الأوتليت الأشهر بين السعوديين — 40 دقيقة قطار، 160 ماركة بخصم 30–70% + Tax Free. مناسب صباح الجمعة 11 ديسمبر قبل Albertina لو حبيتم.</div></div>
+      <div class="trend-item"><div class="t-name"><span>Kärntner Straße + Goldenes Quartier</span><span class="t-pill pill-sa">سعوديين</span></div><div class="t-desc">ممشى الماركات من الأوبرا للكاتدرائية — Prada وLV وRolex. محلات الذهب والساعات أرخص من الرياض بالضريبة المستردة.</div></div>
       </div>
     </div>
 
