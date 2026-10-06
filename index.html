@@ -704,6 +704,17 @@ nav a.vienna { color: var(--vienna); }
 .trend-sub { font-size:11px; color:var(--muted); margin:-6px 0 12px; }
 .halal-note { display:inline-block; font-size:10px; color:#6DC87A; margin-right:6px; }
 
+/* ── ALTERNATIVES ── */
+.alt { margin-top:12px; border:1px dashed rgba(255,255,255,.12); border-radius:3px; padding:12px 14px; background:rgba(255,255,255,.015); }
+.alt-title { font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.alt-row { display:grid; grid-template-columns:72px 1fr; gap:8px; font-size:12.5px; padding:6px 0; border-top:1px solid rgba(255,255,255,.05); }
+.alt-row:first-of-type { border-top:none; }
+.alt-slot { color:var(--muted); font-family:monospace; font-size:11px; padding-top:2px; }
+.alt-opts { color:var(--text); line-height:1.7; }
+.alt-opts b { color:var(--snow); font-weight:700; }
+.alt-opts .or { color:var(--muted); padding:0 5px; }
+@media(max-width:599px){ .alt-row{ grid-template-columns:1fr; gap:2px; } }
+
 /* ── LATE BANNER ── */
 .late-banner {
   display: flex; align-items: center; gap: 18px;
@@ -1116,6 +1127,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-desc"><span class="halal-note">▲ فيه خنزير بالقائمة</span>أفضل مطعم تشيكي أصيل — اطلبوا Svíčková (لحم بقر بصلصة القشدة والتوت) أو Guláš بقري. بديل حلال كامل لأول ليلة: <strong>Habibi Prague</strong> على بعد 5 دقائق. احجزوا قبل أسبوع.</div>
         </div>
       </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">بعد الوصول</div><div class="alt-opts"><b>A</b> نوم ساعتين ثم السوق مع الغروب<span class="or">·</span><b>B</b> تشيك إن وغداء في Habibi ثم مشي الساحة<span class="or">·</span><b>C</b> سبا الفندق أول يوم وسوق الليلة التالية</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> سوق Old Town + Svařák<span class="or">·</span><b>B</b> جولة مشي ليلية مرشدة 2 ساعة (~60 ر)<span class="or">·</span><b>C</b> حفل Klementinum 18:00 ثم السوق</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Lokál Dlouhááá (تشيكي)<span class="or">·</span><b>B</b> Habibi Prague (حلال 100%)<span class="or">·</span><b>C</b> Mlýnec بجانب الجسر (إطلالة)</div></div>
+      </div>
     </div>
 
     <!-- DAY 2 -->
@@ -1162,6 +1179,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-name">Kuchyň · داخل قلعة براغ (Hradčanské náměstí)</div>
           <div class="dinner-desc">غداء بديل لو ما أخذتم القارب: مطعم بلا قائمة — تدخلون المطبخ وتختارون من القدور مباشرة. أكل تشيكي بيتي أصيل، إطلالة على ساحة القلعة.</div>
         </div>
+      </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> تل Petřín بالقطار المائل<span class="or">·</span><b>B</b> Vyšehrad القلعة القديمة + المقبرة الوطنية (أهدأ)<span class="or">·</span><b>C</b> إفطار متأخر في Café Louvre ثم مكتبة Strahov</div></div>
+        <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> Kampa + جدار Lennon<span class="or">·</span><b>B</b> ورشة زجاج بوهيمي (ساعتين)<span class="or">·</span><b>C</b> Pařížská للماركات + الحي اليهودي</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> قارب عشاء على Vltava<span class="or">·</span><b>B</b> كسارة البندق في الأوبرا الوطنية<span class="or">·</span><b>C</b> عشاء هادئ في Grazie على Kampa</div></div>
       </div>
     </div>
 
@@ -1231,6 +1254,13 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-desc"><span class="halal-note">▲ اطلبوا البط أو السمك</span>مطعم في قبو حجري من القرن 16. بط بالكرز، سمك الكارب البوهيمي، ومرق الفطر الغابوي. أكل بوهيمي فاخر في أجواء لا توصف. احجزوا مسبقاً.</div>
         </div>
       </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الفجر</div><div class="alt-opts"><b>A</b> جسر تشارلز 7:00 بالضباب<span class="or">·</span><b>B</b> نوم + إفطار في Café Savoy 9:00<span class="or">·</span><b>C</b> الجسر 8:00 وإفطار في Cukrárna Myšák بالقلعة</div></div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> قلعة براغ كاملة 3 ساعات<span class="or">·</span><b>B</b> Saint Vitus + الزقاق الذهبي فقط (ساعة ونص) ثم Villa Müller<span class="or">·</span><b>C</b> القلعة مع مرشد خاص عربي/إنجليزي (~400 ر)</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Malá Strana + الجسر مضاء<span class="or">·</span><b>B</b> Glass Bar على البيت الراقص للغروب<span class="or">·</span><b>C</b> حفل Smetana Hall 19:30</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> U Modré Kachničky (بط)<span class="or">·</span><b>B</b> Galata التركي (حلال)<span class="or">·</span><b>C</b> Kuchyň في القلعة (بيتي)</div></div>
+      </div>
     </div>
 
     <!-- DAY 3 -->
@@ -1288,6 +1318,13 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-name">Eska · حي Žižkov العصري</div>
           <div class="dinner-desc">أفضل مطعم معاصر في براغ — مطبخ تشيكي محدّث بمكونات محلية. خبز محلي من فرنهم، لحم مشوي على الفحم، حلويات مبتكرة. جيل براغ الجديد يأكل هنا.</div>
         </div>
+      </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> متحف Mucha<span class="or">·</span><b>B</b> متحف براغ (مجاني 2026)<span class="or">·</span><b>C</b> رأس كافكا + Quadrio + Wenceslas Square</div></div>
+        <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> سوق Náměstí Míru المحلي<span class="or">·</span><b>B</b> سوق Holešovice Market للغداء<span class="or">·</span><b>C</b> ورشة زجاج بوهيمي</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> حفل كارولات St. Giles<span class="or">·</span><b>B</b> حمام بيرة/سبا Pivní lázně (تجربة تشيكية مميزة للأزواج)<span class="or">·</span><b>C</b> سينما Lucerna التاريخية</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Eska (عصري)<span class="or">·</span><b>B</b> Habibi Prague (حلال)<span class="or">·</span><b>C</b> Skó السلوفاكي الجديد في Holešovice</div></div>
       </div>
     </div>
 
@@ -1356,6 +1393,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-desc">مطعم نجمة ميشلان واحدة — قائمة تذوق بوهيمية 7 أطباق. أغلى عشاء بالرحلة (~600 ر للاثنين) لكن تجربة فريدة. احجزوا شهراً مسبقاً على الأقل.</div>
         </div>
       </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> إفطار Café Savoy<span class="or">·</span><b>B</b> إفطار Café Louvre<span class="or">·</span><b>C</b> إفطار في Pleiku (تصوير)</div></div>
+        <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> Wallenstein + Letná<span class="or">·</span><b>B</b> الحي اليهودي Josefov<span class="or">·</span><b>C</b> جولة ليلية مرشدة أو تسوق Pařížská</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> La Degustation (ميشلان)<span class="or">·</span><b>B</b> Field (ميشلان، أكثر عصرية)<span class="or">·</span><b>C</b> Mlýnec بإطلالة الجسر (أرخص)</div></div>
+      </div>
     </div>
 
     <!-- DAY 6 -->
@@ -1397,6 +1440,12 @@ footer span.v { color: var(--vienna); }
 
       <div class="transit">
         🚄 <strong>الأحد 6 ديسمبر:</strong> آخر مشية على الجسر 08:00 · تشيك أوت 10:00 · قطار Railjet من Praha hlavní nádraží 11:00 → Wien Hauptbahnhof 15:00 (4 ساعات عبر الريف المثلج — احجزوا First Class، الفرق ~80 ر فقط). تشيك إن في فيينا 16:00 ثم مباشرة لسوق Rathausplatz مع الغروب.
+      </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> سوق Havelské + هدايا<span class="or">·</span><b>B</b> نوم طويل + سبا الفندق<span class="or">·</span><b>C</b> رحلة نصف يوم لـKutná Hora (كنيسة العظام) بالقطار ساعة</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Mikuláš في Old Town<span class="or">·</span><b>B</b> Mikuláš في Václavské náměstí (أقل زحمة)<span class="or">·</span><b>C</b> مشاهدة المسيرات من شرفة Hotel U Prince على الساحة</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Grazie على Kampa<span class="or">·</span><b>B</b> Terasa U Prince (إطلالة الساحة)<span class="or">·</span><b>C</b> Habibi Prague</div></div>
       </div>
     </div>
 
@@ -1523,6 +1572,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-desc">أشهر Wiener Schnitzel في فيينا منذ 1905 — شريحة لحم العجل المقرمشة بحجم أكبر من الطبق! الطابور دليل على الجودة. اوصلوا قبل 7 مساءً أو احجزوا.</div>
         </div>
       </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">التنقل</div><div class="alt-opts"><b>A</b> Railjet 11:00 First Class<span class="or">·</span><b>B</b> سائق خاص عبر Český Krumlov (8 ساعات، ~1,700 ر)<span class="or">·</span><b>C</b> طيران 50 دقيقة (مع وقت المطارات = نفس القطار)</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Rathausplatz مع الغروب<span class="or">·</span><b>B</b> Stephansplatz + Lamée Rooftop<span class="or">·</span><b>C</b> حفل Classic Ensemble في St. Peter 20:00</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Figlmüller (شنيتزل عجل)<span class="or">·</span><b>B</b> Habibi & Hawara (حلال، احجزوا)<span class="or">·</span><b>C</b> Kent التركي 24 ساعة</div></div>
+      </div>
     </div>
 
     <!-- DAY 7 -->
@@ -1581,6 +1636,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-desc">مقهى من 1876 — هنا جلس Freud وTrotsky وHitler الشاب قبل السياسة! قبة ضخمة، موسيقى بيانو حية، كعكة Sachertorte الأصلية. عشاء خفيف + حلويات فيينية. التجربة الأيقونية.</div>
         </div>
       </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> شونبرون كامل<span class="or">·</span><b>B</b> شونبرون الحديقة والسوق فقط (بدون الداخل)<span class="or">·</span><b>C</b> Belvedere (القبلة) وتأجيل شونبرون للخميس</div></div>
+        <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> Kunsthistorisches<span class="or">·</span><b>B</b> Albertina<span class="or">·</span><b>C</b> MuseumsQuartier + Leopold Museum (Schiele)</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Café Central (لو فتح) / Decentral<span class="or">·</span><b>B</b> Café Landtmann<span class="or">·</span><b>C</b> Plachutta Tafelspitz</div></div>
+      </div>
     </div>
 
     <!-- DAY 8 -->
@@ -1638,6 +1699,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-name">Plachutta Wollzeile · Old Town</div>
           <div class="dinner-desc">أشهر Tafelspitz (لحم العجل المسلوق بالمرق) في فيينا — الطبق الإمبراطوري المفضل لفرانز جوزيف. يُقدَّم بقدر نحاسي على الطاولة بطقوس كاملة. احجزوا قبل أسبوع.</div>
         </div>
+      </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Naschmarkt + Spittelberg<span class="or">·</span><b>B</b> Vollpension (جدّات) + Freihausviertel<span class="or">·</span><b>C</b> Lightsout + MuseumsQuartier</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Musikverein<span class="or">·</span><b>B</b> أوبرا الدولة (تذاكر وقوف 10 يورو)<span class="or">·</span><b>C</b> Karlskirche الفصول الأربعة</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Plachutta<span class="or">·</span><b>B</b> Le Sept في Mandarin Oriental (جديد)<span class="or">·</span><b>C</b> Brioche und Brösel (خفيف وعصري)</div></div>
       </div>
     </div>
 
@@ -1698,6 +1765,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-desc">مطعم عائلي من 1932 يبعد عن السياح. Tafelspitz (لحم عجل مسلوق بالخضار والمرق) — الطبق الوطني الفيناوي الحقيقي. بسيط، دافئ، أصيل.</div>
         </div>
       </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Belvedere<span class="or">·</span><b>B</b> Hundertwasserhaus + Kunst Haus (ملوّن، تصوير)<span class="or">·</span><b>C</b> Strudlhofstiege + Sigmund Freud Museum</div></div>
+        <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> جولة 3 كافيهات تاريخية<span class="or">·</span><b>B</b> Demel + Café Sacher + Gerstner (كافيهات الحلويات)<span class="or">·</span><b>C</b> سبا الفندق + عشاء مبكر</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Meixner<span class="or">·</span><b>B</b> Das Kolin (جديد، رومانسي)<span class="or">·</span><b>C</b> Kent التركي (حلال)</div></div>
+      </div>
     </div>
 
     <!-- DAY 10 -->
@@ -1756,6 +1829,12 @@ footer span.v { color: var(--vienna); }
           <div class="dinner-desc">عشاء خفيف قبل الحفل: مطعم نبيذ صغير وحميمي — 200 خيار نبيذ نمساوي، أطباق Bistronomie بسيطة وممتازة. اطلبوا الطاولة 17:30 لتلحقون الحفل.</div>
         </div>
       </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Hofburg كامل<span class="or">·</span><b>B</b> Spanish Riding School عرض 11:00 ثم Sisi Museum<span class="or">·</span><b>C</b> Hofburg الخزينة فقط + Kärntner Straße</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Garanča في Konzerthaus<span class="or">·</span><b>B</b> أوبرا الدولة<span class="or">·</span><b>C</b> Schönbrunn Palace Orchestra</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Zum Wohl (خفيف قبل الحفل)<span class="or">·</span><b>B</b> Brioche und Brösel<span class="or">·</span><b>C</b> عشاء متأخر بعد الحفل في Café Decentral</div></div>
+      </div>
     </div>
 
     <!-- DAY 12 -->
@@ -1794,6 +1873,12 @@ footer span.v { color: var(--vienna); }
         <p>العجلة العملاقة من 1897 — تحجزون كابينة خاصة مزيّنة لعشاء رومانسي على ارتفاع 65 متراً، فيينا مضاءة بالكريسماس تحت أقدامكم طوال دورتين كاملتين. أكثر لحظة تُصوَّر في فيينا، وأكثرها خصوصية. (بديل أرخص: الدورة العادية ~70 ر للاثنين وعشاء في Schweizerhaus).</p>
         <div class="act-time">19:00 الوصول لـPrater · 19:30 الكابينة · 21:00 نزول وتجوال سوق Prater الشتوي</div>
         <div class="fact"><strong>🎡 نجمة السينما:</strong> ظهرت Riesenrad في فيلم The Third Man (1949) وفي James Bond "The Living Daylights". عمرها 129 سنة وما زالت تدور بنفس هيكلها الحديدي.</div>
+      </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Albertina<span class="or">·</span><b>B</b> أوتليت Parndorf (40 دقيقة قطار)<span class="or">·</span><b>C</b> رحلة يوم لـBratislava (ساعة قطار، سوق كريسماس ثاني)</div></div>
+        <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> برج Stephansdom + Demel<span class="or">·</span><b>B</b> Kärntner Straße + Goldenes Quartier<span class="or">·</span><b>C</b> OBEN rooftop للغروب</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> كابينة عشاء Riesenrad<span class="or">·</span><b>B</b> الدورة العادية + عشاء Schweizerhaus<span class="or">·</span><b>C</b> Das LOFT في Sofitel (إطلالة الكاتدرائية)</div></div>
       </div>
     </div>
 
@@ -1835,6 +1920,12 @@ footer span.v { color: var(--vienna); }
 
       <div class="transit">
         ✈️ <strong>الأحد 13 ديسمبر:</strong> تشيك أوت 10:00 · تاكسي (~150 ر) أو قطار CAT من Wien Mitte للمطار Wien Schwechat (16 دقيقة). طيران للرياض. عمر مديد وزواج مبارك! 🤍
+      </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Flohmarkt في Naschmarkt<span class="or">·</span><b>B</b> نوم + إفطار متأخر في Vollpension<span class="or">·</span><b>C</b> متحف Mozarthaus + حفل</div></div>
+        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Rathausplatz وداع<span class="or">·</span><b>B</b> Swinging Christmas (Big Band)<span class="or">·</span><b>C</b> Stephansplatz + Lamée Rooftop آخر إطلالة</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Steirereck<span class="or">·</span><b>B</b> Le Sept (Mandarin Oriental)<span class="or">·</span><b>C</b> Habibi & Hawara</div></div>
       </div>
     </div>
 
