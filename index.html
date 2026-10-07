@@ -715,6 +715,15 @@ nav a.vienna { color: var(--vienna); }
 .alt-opts .or { color:var(--muted); padding:0 5px; }
 @media(max-width:599px){ .alt-row{ grid-template-columns:1fr; gap:2px; } }
 
+/* ── ESSENTIAL / OPTIONAL ── */
+.act:not(.star-p):not(.star-v) .act-name::before { content:'اختياري'; font-size:9px; letter-spacing:.1em; color:var(--muted); border:1px solid var(--border); border-radius:2px; padding:1px 6px; margin-left:8px; vertical-align:middle; }
+.act.star-p .act-name::before, .act.star-v .act-name::before { content:'أساسي'; font-size:9px; letter-spacing:.1em; color:var(--gold); border:1px solid rgba(212,175,106,.35); border-radius:2px; padding:1px 6px; margin-left:8px; vertical-align:middle; }
+.legend { display:flex; flex-wrap:wrap; gap:8px 16px; font-size:11px; color:var(--muted); margin:-16px 0 28px; }
+.legend span { display:flex; align-items:center; gap:6px; }
+.map-link { font-size:11px; color:var(--vienna); text-decoration:none; margin-right:6px; opacity:.8; white-space:nowrap; }
+.map-link:hover { opacity:1; text-decoration:underline; }
+.today-btn { background:rgba(212,175,106,.12); border:1px solid rgba(212,175,106,.4); color:var(--gold) !important; }
+
 /* ── LATE BANNER ── */
 .late-banner {
   display: flex; align-items: center; gap: 18px;
@@ -916,6 +925,7 @@ footer span.v { color: var(--vienna); }
   <a href="#prague" class="prague">براغ</a>
   <a href="#vienna" class="vienna">فيينا</a>
   <a href="#booking">الحجوزات</a>
+  <a href="#" id="todayBtn" class="today-btn">📅 برنامج اليوم</a>
 </nav>
 
 <!-- HERO -->
@@ -933,7 +943,7 @@ footer span.v { color: var(--vienna); }
       <span>🎄 أسواق الكريسماس</span>
       <span>🏰 قصور وجسور</span>
       <span>☕ كافيهات 1700</span>
-      <span>🕌 كل المطاعم حلال</span>
+      <span>🕌 حلال مؤكّد أو موثّق كـ"يحتاج سؤال"</span>
     </div>
   </div>
 </section>
@@ -1001,13 +1011,13 @@ footer span.v { color: var(--vienna); }
   <div class="route-stop">
     <div class="route-icon p">🏰</div>
     <div class="route-name">براغ</div>
-    <div class="route-dates">30 نوفمبر – 6 ديسمبر · 6 ليالٍ</div>
+    <div class="route-dates">30 نوفمبر – 5 ديسمبر · 5 ليالٍ</div>
   </div>
   <div class="route-connector">←</div>
   <div class="route-stop">
     <div class="route-icon v">🎼</div>
     <div class="route-name">فيينا</div>
-    <div class="route-dates">6 – 13 ديسمبر · 7 ليالٍ</div>
+    <div class="route-dates">5 – 13 ديسمبر · 8 ليالٍ</div>
   </div>
 </div>
 
@@ -1020,8 +1030,8 @@ footer span.v { color: var(--vienna); }
       <h2>براغ</h2>
       <div class="city-stats">
         <span>🌡 0–5°م مع احتمال ثلج</span>
-        <span>📅 30 نوفمبر – 6 ديسمبر</span>
-        <span>🏨 6 ليالٍ</span>
+        <span>📅 30 نوفمبر – 5 ديسمبر</span>
+        <span>🏨 5 ليالٍ</span>
         <span>✨ المدينة التي تبدو أجمل تحت الثلج</span>
       </div>
     </div>
@@ -1036,7 +1046,7 @@ footer span.v { color: var(--vienna); }
         <div class="hotel-tag p">★ الترشيح الأول — سويت كاملة</div>
         <h3>Grand Mark Prague</h3>
         <div class="hotel-sub">5★ · The Leading Hotels of the World · Old Town · 293م من الساحة</div>
-        <div class="hotel-price p">~1,600 ر / ليلة · ~9,600 ر (6 ليالٍ)</div>
+        <div class="hotel-price p">~1,600 ر / ليلة · ~8,000 ر (5 ليالٍ) · تقديري</div>
         <p>سويت مضمونة: غرفة نوم منفصلة + صالة معيشة + حمام رخامي. فيه Honeymoon Suite تحديداً بإطلالة 360° على أسقف براغ القرميدية. في قلب Old Town — مشي لكل شيء.</p>
         <p>عند الحجز اذكر "شهر العسل" — يرتّبون تزيين السويت بالورود والشوكولاتة والفواكه — اطلبوا بدون كحول.</p>
         <div class="tip">💡 بديل أقرب للجسر: <strong>Alchymist Grand Hotel</strong> في Malá Strana — سويت بغرفة نوم + صالة + مطبخ بـ~1,300 ر/ليلة، 3 دقائق من جسر تشارلز. أو للفخامة القصوى: <strong>Four Seasons Prague</strong> سويت بإطلالة على الجسر من السرير بـ~2,400 ر/ليلة.</div>
@@ -1070,10 +1080,11 @@ footer span.v { color: var(--vienna); }
       </div>
     </div>
 
-    <div class="days-header">الجدول اليومي · 6 أيام في براغ</div>
+    <div class="days-header">الجدول اليومي · 5 أيام في براغ</div>
+    <div class="legend"><span><b style="color:var(--gold)">أساسي</b> نشاط واحد يكفي اليوم</span><span><b>اختياري</b> حسب المزاج والجو</span><span><b style="color:#F0A032">احجزوا</b> يحتاج حجز مسبق</span><span><b>~</b> سعر تقديري يحتاج عرض فعلي</span><span><b style="color:#6DC87A">✓</b> حلال مؤكّد</span><span><b style="color:#6DC87A">◐</b> يحتاج سؤال</span><span>📍 خرائط</span></div>
 
     <!-- DAY 1 -->
-    <div class="day">
+    <div class="day" data-date="2026-11-30">
       <div class="day-head">
         <div class="day-num">١</div>
         <div class="day-info">
@@ -1109,7 +1120,7 @@ footer span.v { color: var(--vienna); }
           <div>
             <div class="event-title">ليلة القديس نيقولاوس — St. Nicholas Eve 🎅</div>
             <div class="event-meta">5 ديسمبر في الشوارع · مجاني · تقليد تشيكي عمره 500 سنة</div>
-            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">رجال يرتدون زي القديس نيقولاوس والشياطين والملائكة يجوبون شوارع براغ — يعطون الحلوى للأطفال الطيبين ويخيفون الشقيين! يصادف يومكم السادس في براغ (السبت 5 ديسمبر) — مرتّب لكم بالجدول، وأجواؤه تبدأ في الشوارع قبلها بأيام.</div>
+            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">رجال يرتدون زي القديس نيقولاوس والشياطين والملائكة يجوبون شوارع براغ — يعطون الحلوى للأطفال الطيبين ويخيفون الشقيين! 5 ديسمبر هو يوم انتقالكم لفيينا — لكن فيينا تحتفل بنفس التقليد (Nikolo & Krampus) تلك الليلة، وأجواؤه في شوارع براغ تبدأ قبلها بأيام.</div>
           </div>
         </div>
         <div class="event-card">
@@ -1124,7 +1135,7 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🍖</div>
         <div>
-          <div class="dinner-name">Habibi Prague · Na Příkopě 23 <span class="halal-note">✓ حلال 100% · بدون كحول</span></div>
+          <div class="dinner-name">Habibi Prague · Na Příkopě 23 <span class="halal-note">✓ حلال مؤكّد · بدون كحول</span></div>
           <div class="dinner-desc">المطعم الوحيد في براغ حلال بالكامل وبدون كحول — لبناني: مشاوي مشكلة، شاورما، حمص وفتوش، وشيشة بعد العشاء. 5 دقائق من الساحة، وأول ليلة أكل مألوف يريح بعد الطيران. يفتح حتى منتصف الليل.</div>
         </div>
       </div>
@@ -1133,11 +1144,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">بعد الوصول</div><div class="alt-opts"><b>A</b> نوم ساعتين ثم السوق مع الغروب<span class="or">·</span><b>B</b> تشيك إن وغداء في Habibi ثم مشي الساحة<span class="or">·</span><b>C</b> سبا الفندق أول يوم وسوق الليلة التالية</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> سوق Old Town + بنش ساخن (بدون كحول)<span class="or">·</span><b>B</b> جولة مشي ليلية مرشدة 2 ساعة (~60 ر)<span class="or">·</span><b>C</b> حفل Klementinum 18:00 ثم السوق</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Habibi Prague (حلال 100%)<span class="or">·</span><b>B</b> Habibi Prague (حلال 100%)<span class="or">·</span><b>C</b> Mlýnec سمك بإطلالة الجسر</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Habibi + مشي داخل Palladium mall ثم السوق بعد المطر</div></div>
       </div>
     </div>
 
     <!-- DAY 2 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-01">
       <div class="day-head">
         <div class="day-num">٢</div>
         <div class="day-info">
@@ -1177,7 +1189,7 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🍲</div>
         <div>
-          <div class="dinner-name">Pho Vietnam Tuan & Lan · Anglická (Vinohrady) <span class="halal-note">✓ سمك ودجاج حلال</span></div>
+          <div class="dinner-name">Pho Vietnam Tuan & Lan · Anglická (Vinohrady) <span class="halal-note">◐ يحتاج سؤال — سمك/دجاج، اسألوا عن مصدر الدجاج</span></div>
           <div class="dinner-desc">غداء بديل لو ما أخذتم القارب: أشهر فيتنامي في براغ (الجالية الفيتنامية ثالث أكبر جالية في التشيك) — شوربة Pho بالدجاج الحلال، سمك مشوي بالليمون، وسبرنغ رول. يوضّحون مصدر الدجاج الحلال عند السؤال.</div>
         </div>
       </div>
@@ -1186,11 +1198,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> تل Petřín بالقطار المائل<span class="or">·</span><b>B</b> Vyšehrad القلعة القديمة + المقبرة الوطنية (أهدأ)<span class="or">·</span><b>C</b> إفطار متأخر في Café Louvre ثم مكتبة Strahov</div></div>
         <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> Kampa + جدار Lennon<span class="or">·</span><b>B</b> ورشة زجاج بوهيمي (ساعتين)<span class="or">·</span><b>C</b> Pařížská للماركات + الحي اليهودي</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> قارب عشاء على Vltava<span class="or">·</span><b>B</b> كسارة البندق في الأوبرا الوطنية<span class="or">·</span><b>C</b> Mailsi الباكستاني (حلال)</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Mandarin Oriental سبا للأزواج بدل Petřín</div></div>
       </div>
     </div>
 
     <!-- DAY 3 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-02">
       <div class="day-head">
         <div class="day-num">٣</div>
         <div class="day-info">
@@ -1251,7 +1264,7 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🦆</div>
         <div>
-          <div class="dinner-name">Galata · Opletalova 20 <span class="halal-note">✓ حلال · تركي</span></div>
+          <div class="dinner-name">Galata · Opletalova 20 <span class="halal-note">✓ حلال مؤكّد · تركي</span></div>
           <div class="dinner-desc">أعلى تركي تقييماً في براغ — Adana kebab على الفحم، Pide بالجبن، شوربة عدس ساخنة، وشاي تركي في الختام. بعد يوم القلعة الطويل أكل مشوي دافئ هو المطلوب. 10 دقائق من الفندق.</div>
         </div>
       </div>
@@ -1261,11 +1274,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> قلعة براغ كاملة 3 ساعات<span class="or">·</span><b>B</b> Saint Vitus + الزقاق الذهبي فقط (ساعة ونص) ثم Villa Müller<span class="or">·</span><b>C</b> القلعة مع مرشد خاص عربي/إنجليزي (~400 ر)</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Malá Strana + الجسر مضاء<span class="or">·</span><b>B</b> Glass Bar على البيت الراقص للغروب<span class="or">·</span><b>C</b> حفل Smetana Hall 19:30</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Galata التركي (حلال)<span class="or">·</span><b>B</b> Galata التركي (حلال)<span class="or">·</span><b>C</b> Pho Vietnam (سمك/دجاج حلال)</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">القلعة داخلية أصلاً — Saint Vitus + الخزينة</div></div>
       </div>
     </div>
 
     <!-- DAY 3 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-03">
       <div class="day-head">
         <div class="day-num">٤</div>
         <div class="day-info">
@@ -1316,7 +1330,7 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🥩</div>
         <div>
-          <div class="dinner-name">Mailsi · Lipanská 1, Žižkov <span class="halal-note">✓ حلال · باكستاني</span></div>
+          <div class="dinner-name">Mailsi · Lipanská 1, Žižkov <span class="halal-note">✓ حلال مؤكّد · باكستاني</span></div>
           <div class="dinner-desc">أقدم وأشهر باكستاني في براغ (منذ 1994) — لحم غنم Karahi، برياني، نان من التنور. السفارات العربية تأكل هنا. أجواء بسيطة وأكل يذكّركم بالرياض. احجزوا قبل يومين.</div>
         </div>
       </div>
@@ -1326,11 +1340,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> سوق Náměstí Míru المحلي<span class="or">·</span><b>B</b> سوق Holešovice Market للغداء<span class="or">·</span><b>C</b> ورشة زجاج بوهيمي</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> حفل كارولات St. Giles<span class="or">·</span><b>B</b> سبا للأزواج في Mandarin Oriental Prague (الدير القديم)<span class="or">·</span><b>C</b> سينما Lucerna التاريخية</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Mailsi الباكستاني (حلال)<span class="or">·</span><b>B</b> Habibi Prague (حلال)<span class="or">·</span><b>C</b> Dhaba Beas (نباتي هندي، Holešovice)</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Mucha + متحف براغ (مجاني) + Café Louvre</div></div>
       </div>
     </div>
 
     <!-- DAY 4 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-04">
       <div class="day-head">
         <div class="day-num">٥</div>
         <div class="day-info">
@@ -1373,14 +1388,6 @@ footer span.v { color: var(--vienna); }
         <div class="event-card">
           <div class="event-dot p"></div>
           <div>
-            <div class="event-title">Souboj klavírů — ثنائي بيانو كوميدي وكلاسيكي</div>
-            <div class="event-meta">13 ديسمبر · Prague Congress Centre · ~70 ر/شخص</div>
-            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">حفل فريد: بيانيستان يتنافسان على مسرح واحد — Beethoven لو كان متفائلاً؟ موسيقى كلاسيكية بروح فكاهية. يُقدَّم ردّ الفعل الجمهور كجزء من الحفل. تجربة مختلفة كلياً عن الحفلات الكلاسيكية التقليدية.</div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-dot p"></div>
-          <div>
             <div class="event-title">جولة براغ المزينة بالثلج — Christmas Lights Walking Tour</div>
             <div class="event-meta">يومياً · ~60 ر للاثنين · 2 ساعة مساءً</div>
             <div style="font-size:12.5px;color:var(--text);margin-top:5px;">جولة مشي مرشدة بالليل تأخذكم للأزقة المضاءة والكنائس والأسواق الخفية. المرشد يروي قصص براغ في الشتاء وأساطير المدينة القديمة. أفضل طريقة لتوديع براغ.</div>
@@ -1390,63 +1397,19 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🍷</div>
         <div>
-          <div class="dinner-name">Sansho · Petrská (Old Town) <span class="halal-note">✓ أطباق سمك ونباتي — اطلبوا بدون كحول</span></div>
+          <div class="dinner-name">Sansho · Petrská (Old Town) <span class="halal-note">◐ يحتاج سؤال — سمك/نباتي بدون كحول</span></div>
           <div class="dinner-desc">أشهر مطعم آسيوي راقٍ في براغ (الشيف Paul Day) — قائمة تذوق مشتركة. اطلبوا عند الحجز قائمة <strong>سمك ونباتي كاملة بدون لحم ولا كحول</strong>؛ يرتّبونها عادةً. ~500 ر للاثنين. احجزوا قبل 3 أسابيع. بديل أرخص: Habibi Prague.</div>
         </div>
+      </div>
+      <div class="transit">
+        🚄 <strong>السبت 5 ديسمبر — يوم الانتقال (خفيف):</strong> آخر مشية على الجسر 08:00 · تشيك أوت 10:00 · Railjet 11:00 من Praha hl.n. → Wien Hbf 15:00 (First Class، الفرق ~80 ر) · تشيك إن 16:00 · عشاء قريب من الفندق فقط. مساء اليوم نفسه فيينا تحتفل بـ<strong>Nikolo & Krampus</strong> (نفس تقليد Mikuláš) حول Rathausplatz — لو فيكم طاقة.
       </div>
       <div class="alt">
         <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> إفطار Café Savoy<span class="or">·</span><b>B</b> إفطار Café Louvre<span class="or">·</span><b>C</b> إفطار في Pleiku (تصوير)</div></div>
         <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> Wallenstein + Letná<span class="or">·</span><b>B</b> الحي اليهودي Josefov<span class="or">·</span><b>C</b> جولة ليلية مرشدة أو تسوق Pařížská</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Sansho (قائمة سمك/نباتي)<span class="or">·</span><b>B</b> Habibi Prague<span class="or">·</span><b>C</b> Mlýnec سمك بإطلالة الجسر</div></div>
-      </div>
-    </div>
-
-    <!-- DAY 6 -->
-    <div class="day">
-      <div class="day-head">
-        <div class="day-num">٦</div>
-        <div class="day-info">
-          <div class="day-title">ليلة القديس نيقولاوس — وداع براغ الكبير</div>
-          <div class="day-date">السبت · 5 ديسمبر</div>
-        </div>
-      </div>
-
-      <div class="act">
-        <div class="act-head">
-          <div class="act-name">صباح حر — سوق Havelské + تسوق الهدايا</div>
-          <span class="badge b-free">مجاني</span>
-        </div>
-        <p>سوق Havelské المفتوح (منذ 1232م) للهدايا اليدوية والخشبيات والمربّى البوهيمي. ثم Rott Crystal للزجاج البوهيمي، مجوهرات الغرانيت التشيكي (Garnet)، أو شوكولاتة CHOCO STORY. آخر فرصة لهدايا الأهل.</p>
-        <div class="act-time">09:30 إفطار متأخر · 10:30 Havelské · 12:00 Rott Crystal · 13:30 غداء</div>
-      </div>
-
-      <div class="act star-p">
-        <div class="act-head">
-          <div class="act-name">⭐ Mikuláš — ليلة القديس نيقولاوس في ساحة Old Town</div>
-          <span class="badge b-free">مجاني · 5 ديسمبر فقط</span>
-        </div>
-        <p>الليلة الوحيدة في السنة التي تمتلئ فيها شوارع براغ بالقديس نيقولاوس (Mikuláš) والشياطين (čert) والملائكة (anděl) — يسألون الأطفال إن كانوا طيبين ويوزعون الحلوى. الأجواء في ساحة Old Town وVáclavské náměstí لا تتكرر، وصدفة أنكم في براغ هذه الليلة هدية بحد ذاتها.</p>
-        <div class="act-time">16:30 غروب + Kinderpunsch · 17:00–20:00 الساحة والمسيرات · 20:30 عشاء الوداع</div>
-        <div class="fact"><strong>😈 لماذا الشياطين؟</strong> تقليد تشيكي من القرن 15: نيقولاوس يكافئ، الشيطان يهدد بأخذ الأشقياء في كيسه، والملاك يشفع لهم. الأطفال التشيك يحفظون أغنية صغيرة يغنونها لنيقولاوس ليتجنبوا الكيس!</div>
-      </div>
-
-      <div class="dinner">
-        <div class="dinner-icon">🍷</div>
-        <div>
-          <div class="dinner-name">Mlýnec · Novotného lávka (بجانب الجسر) <span class="halal-note">✓ سمك وأطباق بحرية</span></div>
-          <div class="dinner-desc">عشاء الوداع بإطلالة مباشرة على جسر تشارلز المضاء من النافذة — سمك السلمون المشوي، Sea bass، أو Risotto الفطر. اطلبوا طاولة النافذة وقولوا "no alcohol, no pork" عند الحجز.</div>
-        </div>
-      </div>
-
-      <div class="transit">
-        🚄 <strong>الأحد 6 ديسمبر:</strong> آخر مشية على الجسر 08:00 · تشيك أوت 10:00 · قطار Railjet من Praha hlavní nádraží 11:00 → Wien Hauptbahnhof 15:00 (4 ساعات عبر الريف المثلج — احجزوا First Class، الفرق ~80 ر فقط). تشيك إن في فيينا 16:00 ثم مباشرة لسوق Rathausplatz مع الغروب.
-      </div>
-      <div class="alt">
-        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
-        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> سوق Havelské + هدايا<span class="or">·</span><b>B</b> نوم طويل + سبا الفندق<span class="or">·</span><b>C</b> رحلة نصف يوم لـKutná Hora (كنيسة العظام) بالقطار ساعة</div></div>
-        <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Mikuláš في Old Town<span class="or">·</span><b>B</b> Mikuláš في Václavské náměstí (أقل زحمة)<span class="or">·</span><b>C</b> مشاهدة المسيرات من شرفة Hotel U Prince على الساحة</div></div>
-        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Mlýnec بإطلالة الجسر (سمك)<span class="or">·</span><b>B</b> Galata التركي<span class="or">·</span><b>C</b> Habibi Prague</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">مكتبة Strahov + Josefov (داخلي)</div></div>
       </div>
     </div>
 
@@ -1464,8 +1427,8 @@ footer span.v { color: var(--vienna); }
       <h2>فيينا</h2>
       <div class="city-stats">
         <span>🌡 2–6°م</span>
-        <span>📅 6 – 13 ديسمبر</span>
-        <span>🏨 7 ليالٍ</span>
+        <span>📅 5 – 13 ديسمبر</span>
+        <span>🏨 8 ليالٍ</span>
         <span>🎻 حيث وُلدت الموسيقى الكلاسيكية</span>
         <span>👑 مدينة تشعرك أنك ملك وملكة</span>
       </div>
@@ -1481,7 +1444,7 @@ footer span.v { color: var(--vienna); }
         <div class="hotel-tag v">★ الترشيح الأول — سويت كاملة</div>
         <h3>The Amauris Vienna — Relais & Châteaux</h3>
         <div class="hotel-sub">5★ · Ringstraße · بين Musikverein والأوبرا مباشرة</div>
-        <div class="hotel-price v">~1,600 ر / ليلة · ~11,200 ر (7 ليالٍ)</div>
+        <div class="hotel-price v">~1,600 ر / ليلة · ~12,800 ر (8 ليالٍ) · تقديري</div>
         <p>Corner Suite — غرفة نوم منفصلة + صالة معيشة كاملة + حمام فاخر بحوض وشاور. الموقع لا يُضاهى: خطوات من Musikverein وأوبرا فيينا والـRingstraße الإمبراطورية. تصميم داخلي بطابع فيناوي أصيل مع لمسات معاصرة. سبا وبركة سباحة داخلية بالفندق.</p>
         <p>عند الحجز اذكر "شهر العسل" — يرتّبون إضاءة خاصة وورود وشوكولاتة فيينية — اطلبوا بدون كحول.</p>
         <div class="tip">💡 خيار ساحر: <strong>Rosewood Vienna</strong> — St. Peter's Suite بغرفة نوم + صالة + إطلالة مباشرة على كنيسة Peterskirche بـ~2,200 ر/ليلة. أو للتجربة الإمبراطورية الكاملة: <strong>Grand Suite في قصر شونبرون نفسه</strong> — تنامون داخل القصر الإمبراطوري فعلياً بـ~3,500 ر/ليلة.</div>
@@ -1515,14 +1478,58 @@ footer span.v { color: var(--vienna); }
       </div>
     </div>
 
-    <div class="days-header">الجدول اليومي · 7 أيام في فيينا</div>
+    <div class="days-header">الجدول اليومي · 8 أيام في فيينا</div>
+    <div class="legend"><span><b style="color:var(--gold)">أساسي</b> نشاط واحد يكفي اليوم</span><span><b>اختياري</b> حسب المزاج والجو</span><span><b style="color:#F0A032">احجزوا</b> يحتاج حجز مسبق</span><span><b>~</b> سعر تقديري يحتاج عرض فعلي</span><span><b style="color:#6DC87A">✓</b> حلال مؤكّد</span><span><b style="color:#6DC87A">◐</b> يحتاج سؤال</span><span>📍 خرائط</span></div>
 
     <!-- DAY 6 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-05">
+      <div class="day-head">
+        <div class="day-num">٦</div>
+        <div class="day-info">
+          <div class="day-title">يوم الانتقال — وصول هادئ لفيينا</div>
+          <div class="day-date">السبت · 5 ديسمبر</div>
+        </div>
+      </div>
+
+      <div class="act star-v">
+        <div class="act-head">
+          <div class="act-name">⭐ Railjet براغ → فيينا + تشيك إن</div>
+          <span class="badge b-book">احجزوا القطار</span>
+        </div>
+        <p>4 ساعات في القطار عبر الريف المثلج — نوم، كتاب، وقهوة من عربة الطعام. الوصول 15:00، الفندق 16:00، وما بعدها راحة. هذا اليوم مقصود خفيف: ما فيه معالم ولا حجوزات.</p>
+        <div class="act-time">11:00 القطار · 15:00 Wien Hbf · 16:00 تشيك إن · 18:00 تمشية حول الفندق</div>
+      </div>
+
+      <div class="act">
+        <div class="act-head">
+          <div class="act-name">Nikolo & Krampus حول Rathausplatz — لو فيكم طاقة</div>
+          <span class="badge b-free">مجاني · اختياري</span>
+        </div>
+        <p>5 ديسمبر في النمسا ليلة القديس نيقولاوس — Nikolo يوزّع الحلوى والـKrampus (الشيطان بالفراء والأجراس) يجوب السوق. 20 دقيقة فرجة وKinderpunsch ثم عودة للفندق.</p>
+        <div class="act-time">18:30–19:30 إن رغبتم</div>
+      </div>
+
+      <div class="dinner">
+        <div class="dinner-icon">🍲</div>
+        <div>
+          <div class="dinner-name">Levante · Wallnerstraße 2 <span class="halal-note">✓ حلال مؤكّد · لبناني</span></div>
+          <div class="dinner-desc">قريب، مألوف، وبدون حجز — مازة وشيش طاووق بعد يوم القطار. 7 دقائق مشي من الفندق.</div>
+        </div>
+      </div>
+      <div class="alt">
+        <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
+        <div class="alt-row"><div class="alt-slot">التنقل</div><div class="alt-opts"><b>A</b> Railjet 11:00<span class="or">·</span><b>B</b> سائق خاص عبر Český Krumlov (8 ساعات، ~1,700 ر)<span class="or">·</span><b>C</b> طيران 50 دقيقة</div></div>
+        <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Levante<span class="or">·</span><b>B</b> خدمة الغرف في السويت<span class="or">·</span><b>C</b> Kent (24 ساعة)</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">سبا وبركة الفندق الداخلية</div></div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day" data-date="2026-12-06">
       <div class="day-head">
         <div class="day-num">٧</div>
         <div class="day-info">
-          <div class="day-title">يوم الوصول — أجمل سوق كريسماس بالعالم</div>
+          <div class="day-title">أجمل سوق كريسماس بالعالم</div>
           <div class="day-date">الأحد · 6 ديسمبر</div>
         </div>
       </div>
@@ -1533,7 +1540,7 @@ footer span.v { color: var(--vienna); }
           <span class="badge b-free">مجاني</span>
         </div>
         <p>يفتح من 15 نوفمبر حتى 26 ديسمبر. أمام قصر البلدية القوطي الضخم — 150 كشك أمام واجهة مضاءة بـ300,000 مصباح. الجليد يتساقط أحياناً وأنتم تمشون بين الكشك والكشك. Kinderpunsch (البنش الساخن بدون كحول — في كل كشك)، Maroni (كستناء مشوية)، Vanillekipferl (بسكويت الفانيلا الهلالي). الأجواء التي وصفتها الصور ثلاث مرات — لكن العيش فيها مختلف تماماً.</p>
-        <div class="act-time">16:00 تشيك إن · 16:45 وصول السوق مع الغروب · 17:30 إضاءة كاملة · 20:00 عشاء</div>
+        <div class="act-time">فطور براحتكم · 11:00 Stephansdom وKärntner Straße · 15:30 Rathausplatz مع الغروب · 17:00 إضاءة كاملة · 19:30 عشاء</div>
         <div class="fact"><strong>🎄 500 سنة تقليد:</strong> أسواق الكريسماس الفيينية تقليد يمتد لـ700+ سنة! أول سوق رُسمي موثّق في فيينا كان عام 1298م في عهد الهابسبورغ.</div>
       </div>
 
@@ -1569,20 +1576,21 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🥩</div>
         <div>
-          <div class="dinner-name">Habibi & Hawara · Wipplingerstraße 29 <span class="halal-note">✓ حلال · شامي</span></div>
+          <div class="dinner-name">Habibi & Hawara · Wipplingerstraße 29 <span class="halal-note">✓ حلال مؤكّد · شامي</span></div>
           <div class="dinner-desc">أشهر مطعم شامي في فيينا — فريقه من لاجئين سوريين، أكل بيتي راقٍ بتقديم عصري: كبسة، مقلوبة، مشاوي، ومنسف أيام الجمعة. أول ليلة في فيينا بأكل من البيت. احجزوا قبل أسبوع، 8 دقائق مشي من Rathausplatz.</div>
         </div>
       </div>
       <div class="alt">
         <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
-        <div class="alt-row"><div class="alt-slot">التنقل</div><div class="alt-opts"><b>A</b> Railjet 11:00 First Class<span class="or">·</span><b>B</b> سائق خاص عبر Český Krumlov (8 ساعات، ~1,700 ر)<span class="or">·</span><b>C</b> طيران 50 دقيقة (مع وقت المطارات = نفس القطار)</div></div>
+        <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> نوم طويل + Stephansdom<span class="or">·</span><b>B</b> Lightsout (الترند الكوري) + Kärntner Straße<span class="or">·</span><b>C</b> Naschmarkt</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Rathausplatz مع الغروب<span class="or">·</span><b>B</b> Stephansplatz + Lamée Rooftop<span class="or">·</span><b>C</b> حفل Classic Ensemble في St. Peter 20:00</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Habibi & Hawara (حلال، احجزوا)<span class="or">·</span><b>B</b> Levante اللبناني (حلال)<span class="or">·</span><b>C</b> Kent التركي 24 ساعة</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Albertina + Lightsout بدل التمشية</div></div>
       </div>
     </div>
 
     <!-- DAY 7 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-07">
       <div class="day-head">
         <div class="day-num">٨</div>
         <div class="day-info">
@@ -1633,7 +1641,7 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🎂</div>
         <div>
-          <div class="dinner-name">Café Central · Herrengasse <span class="halal-note">✓ حلويات وأطباق نباتية · </span><span class="halal-note" style="color:#F0A032">▲ مغلق للترميم حتى خريف 2026 — البديل Café Decentral في Freyung</span></div>
+          <div class="dinner-name">Café Central · Herrengasse <span class="halal-note">◐ يحتاج سؤال — نباتي/حلويات · </span><span class="halal-note" style="color:#F0A032">▲ مغلق للترميم حتى خريف 2026 — البديل Café Decentral في Freyung</span></div>
           <div class="dinner-desc">مقهى من 1876 — جلس فيه Freud وTrotsky. قبة ضخمة وبيانو حي. عشاء خفيف: شوربة القرع، Käsespätzle (معكرونة الجبن النمساوية)، وكعكة Sachertorte (بدون كحول — الأصلية لا تحتوي كحولاً). التجربة الأيقونية.</div>
         </div>
       </div>
@@ -1642,11 +1650,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> شونبرون كامل<span class="or">·</span><b>B</b> شونبرون الحديقة والسوق فقط (بدون الداخل)<span class="or">·</span><b>C</b> Belvedere (القبلة) وتأجيل شونبرون للخميس</div></div>
         <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> Kunsthistorisches<span class="or">·</span><b>B</b> Albertina<span class="or">·</span><b>C</b> MuseumsQuartier + Leopold Museum (Schiele)</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Café Central (لو فتح) / Decentral<span class="or">·</span><b>B</b> Café Landtmann<span class="or">·</span><b>C</b> Levante اللبناني (حلال)</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">شونبرون الداخل + Kunsthistorisches (داخلي كله)</div></div>
       </div>
     </div>
 
     <!-- DAY 8 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-08">
       <div class="day-head">
         <div class="day-num">٩</div>
         <div class="day-info">
@@ -1680,14 +1689,6 @@ footer span.v { color: var(--vienna); }
         <div class="event-card">
           <div class="event-dot v"></div>
           <div>
-            <div class="event-title">Christmas in Vienna Gala — Wiener Konzerthaus</div>
-            <div class="event-meta">16–17 ديسمبر · Konzerthaus (Great Hall) · ~250–400 ر/شخص</div>
-            <div style="font-size:12.5px;color:var(--text);margin-top:5px;">حفل الجالا السنوي الأشهر — Vienna Boys Choir + Wiener Singakademie + ORF Radio Symphony Orchestra. يُبَثّ على التلفزيون الأوروبي. كارولات عالمية من Bach وMozart حتى Silent Night. احجزوا فوراً — يُباع قبل أشهر. أنتم في فيينا 6–13 ديسمبر، فالجالا بعد سفركم — لكن بروفاته وعروض Konzerthaus المجاورة متاحة.</div>
-          </div>
-        </div>
-        <div class="event-card">
-          <div class="event-dot v"></div>
-          <div>
             <div class="event-title">Four Seasons بكنيسة Karlskirche — Orchestra 1756</div>
             <div class="event-meta">طوال ديسمبر · Karlskirche · ~90 ر/شخص</div>
             <div style="font-size:12.5px;color:var(--text);margin-top:5px;">فيفالدي "الفصول الأربعة" في كنيسة Karlskirche الباروكية المذهلة على Karlsplatz — Orchestra 1756 يعزف عروضاً منتظمة ليلية. الصوتيات ومنظر الكنيسة يجعلان فيفالدي تجربة مختلفة كلياً.</div>
@@ -1697,7 +1698,7 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🐟</div>
         <div>
-          <div class="dinner-name">Kent Restaurant · Brunnengasse 67 <span class="halal-note">✓ حلال · تركي · 24 ساعة</span></div>
+          <div class="dinner-name">Kent Restaurant · Brunnengasse 67 <span class="halal-note">✓ حلال مؤكّد · تركي · 24 ساعة</span></div>
           <div class="dinner-desc">المطعم التركي الأصلي للفيينيين — Iskender kebab، Lahmacun، مشاوي مشكلة على الفحم، وأسعار نصف وسط المدينة. مفتوح 24 ساعة فمناسب بعد الحفل. 10 دقائق مترو U6 لـJosefstädter Straße.</div>
         </div>
       </div>
@@ -1706,11 +1707,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Naschmarkt + Spittelberg<span class="or">·</span><b>B</b> Vollpension (جدّات) + Freihausviertel<span class="or">·</span><b>C</b> Lightsout + MuseumsQuartier</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Musikverein<span class="or">·</span><b>B</b> أوبرا الدولة (تذاكر وقوف 10 يورو)<span class="or">·</span><b>C</b> Karlskirche الفصول الأربعة</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Kent التركي (حلال)<span class="or">·</span><b>B</b> Le Sept في Mandarin Oriental (اطلبوا سمك، بدون كحول)<span class="or">·</span><b>C</b> Levante اللبناني</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">MuseumsQuartier + Vollpension</div></div>
       </div>
     </div>
 
     <!-- DAY 9 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-09">
       <div class="day-head">
         <div class="day-num">١٠</div>
         <div class="day-info">
@@ -1762,8 +1764,8 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🥗</div>
         <div>
-          <div class="dinner-name">Levante · Wallnerstraße 2 (Innere Stadt) <span class="halal-note">✓ حلال · لبناني</span></div>
-          <div class="dinner-desc">سلسلة لبنانية فيينية عريقة في قلب الحي الأول خطوات من Hofburg — مازة كاملة، كبة، شيش طاووق، وكنافة. يوم الكافيهات الطويل يختم بأكل عربي خفيف وقريب من الفندق.</div>
+          <div class="dinner-name">Steirereck im Stadtpark <span class="halal-note">◐ يحتاج سؤال — قائمة سمك/نباتي بدون كحول عند الحجز</span></div>
+          <div class="dinner-desc">العشاء الرومانسي الكبير للرحلة — من أفضل 50 مطعم في العالم في قلب حديقة المدينة. عند الحجز اكتبوا <strong>"pescatarian menu, no alcohol in dishes, non-alcoholic pairing"</strong>. ~800 ر للاثنين. احجزوا الآن (شهرين مسبقاً). وضعناه بمنتصف الرحلة لا ليلة الرجعة.</div>
         </div>
       </div>
       <div class="alt">
@@ -1771,15 +1773,16 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Belvedere<span class="or">·</span><b>B</b> Hundertwasserhaus + Kunst Haus (ملوّن، تصوير)<span class="or">·</span><b>C</b> Strudlhofstiege + Sigmund Freud Museum</div></div>
         <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> جولة 3 كافيهات تاريخية<span class="or">·</span><b>B</b> Demel + Café Sacher + Gerstner (كافيهات الحلويات)<span class="or">·</span><b>C</b> سبا الفندق + عشاء مبكر</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Levante اللبناني (حلال)<span class="or">·</span><b>B</b> Habibi & Hawara<span class="or">·</span><b>C</b> Kent التركي (حلال)</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Belvedere + كافيه واحد فقط</div></div>
       </div>
     </div>
 
     <!-- DAY 10 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-10">
       <div class="day-head">
         <div class="day-num">١١</div>
         <div class="day-info">
-          <div class="day-title">يوم الهابسبورغ — وحفل Garanča</div>
+          <div class="day-title">يوم الهابسبورغ</div>
           <div class="day-date">الخميس · 10 ديسمبر</div>
         </div>
       </div>
@@ -1794,12 +1797,12 @@ footer span.v { color: var(--vienna); }
         <div class="fact"><strong>⚖️ 600 سنة حكم:</strong> الهابسبورغ حكموا فيينا وأوروبا 640 سنة متواصلة (1278–1918). آخر إمبراطور Karl I نُفي عام 1918 وتوفي في المنفى عمره 34 سنة.</div>
       </div>
 
-      <div class="act star-v">
+      <div class="act">
         <div class="act-head">
-          <div class="act-name">⭐ حفل Advent مع Elīna Garanča — Konzerthaus</div>
-          <span class="badge b-must">احجزوا الآن</span>
+          <div class="act-name">حفل Advent مع Elīna Garanča — Konzerthaus</div>
+          <span class="badge b-book">اختياري · اسمعوا لها أولاً</span>
         </div>
-        <p>اليوم موعد الحفل الذي تدور حوله رحلة فيينا — Elīna Garanča مع أوركسترا ORF في القاعة الكبرى. عشاء مبكر خفيف، ثم الحفل 19:30. البسوا أنيق — الفيينيون يأخذون الكونسرت بجدية.</p>
+        <p>غناء أوبرالي (ميتزو سوبرانو) مع أوركسترا — نوع موسيقي محدد، يعشقه ناس ويملّ منه ناس. قبل ما تحجزوا، افتحوا YouTube واسمعوا "Garanča Ave Maria" 3 دقائق؛ لو عجبكم احجزوا، ولو لا فالمساء حر أو Schönbrunn Orchestra (أخف وأقصر). الحفل 19:30 لو اخترتموه.</p>
         <div class="act-time">17:30 عشاء خفيف قرب Konzerthaus · 19:30 الحفل · 21:30 مشي على الـRing المضاء</div>
       </div>
 
@@ -1826,7 +1829,7 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🕯</div>
         <div>
-          <div class="dinner-name">Brioche und Brösel · الحي الأول <span class="halal-note">✓ اطلبوا نسخة الدجاج أو السمك</span></div>
+          <div class="dinner-name">Brioche und Brösel · الحي الأول <span class="halal-note">◐ يحتاج سؤال — دجاج/سمك، ليس حلالاً معتمداً</span></div>
           <div class="dinner-desc">عشاء خفيف وسريع قبل الحفل: مفهوم Figlmüller الجديد — برغر بالدجاج المقرمش أو السمك، وبطاطس بالحجم الفييني. 20 دقيقة وتمشون للـKonzerthaus. (بديل حلال مضمون: Habibi & Hawara يفتح 17:00.)</div>
         </div>
       </div>
@@ -1835,11 +1838,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Hofburg كامل<span class="or">·</span><b>B</b> Spanish Riding School عرض 11:00 ثم Sisi Museum<span class="or">·</span><b>C</b> Hofburg الخزينة فقط + Kärntner Straße</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Garanča في Konzerthaus<span class="or">·</span><b>B</b> أوبرا الدولة<span class="or">·</span><b>C</b> Schönbrunn Palace Orchestra</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Brioche und Brösel (دجاج/سمك، سريع)<span class="or">·</span><b>B</b> Levante (قريب من Konzerthaus)<span class="or">·</span><b>C</b> عشاء متأخر بعد الحفل في Café Decentral</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Hofburg (داخلي) + Café Decentral</div></div>
       </div>
     </div>
 
     <!-- DAY 12 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-11">
       <div class="day-head">
         <div class="day-num">١٢</div>
         <div class="day-info">
@@ -1880,11 +1884,12 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Albertina<span class="or">·</span><b>B</b> أوتليت Parndorf (40 دقيقة قطار)<span class="or">·</span><b>C</b> رحلة يوم لـBratislava (ساعة قطار، سوق كريسماس ثاني)</div></div>
         <div class="alt-row"><div class="alt-slot">بعد الظهر</div><div class="alt-opts"><b>A</b> برج Stephansdom + Demel<span class="or">·</span><b>B</b> Kärntner Straße + Goldenes Quartier<span class="or">·</span><b>C</b> OBEN rooftop للغروب</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> كابينة عشاء Riesenrad<span class="or">·</span><b>B</b> الدورة العادية + عشاء Kent (24 ساعة)<span class="or">·</span><b>C</b> Das LOFT في Sofitel (سمك، إطلالة الكاتدرائية)</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Albertina + Demel ثم Riesenrad (الكابينة مغلقة ودافئة)</div></div>
       </div>
     </div>
 
     <!-- DAY 13 -->
-    <div class="day">
+    <div class="day" data-date="2026-12-12">
       <div class="day-head">
         <div class="day-num">١٣</div>
         <div class="day-info">
@@ -1914,8 +1919,8 @@ footer span.v { color: var(--vienna); }
       <div class="dinner">
         <div class="dinner-icon">🕯</div>
         <div>
-          <div class="dinner-name">Steirereck im Stadtpark <span class="halal-note">✓ قائمة سمك/نباتي بدون كحول عند الحجز</span></div>
-          <div class="dinner-desc">عشاء الوداع الكبير — من أفضل 50 مطعم في العالم في قلب حديقة المدينة. عند الحجز اكتبوا <strong>"pescatarian menu, no alcohol in dishes, non-alcoholic pairing"</strong> — يرتّبون قائمة سمك ونباتي كاملة ويقدّمون عصائر مُطابقة بدل النبيذ. ~800 ر للاثنين. احجزوا الآن (شهرين مسبقاً). بديل حلال كامل: Habibi & Hawara.</div>
+          <div class="dinner-name">Habibi & Hawara · Wipplingerstraße 29 <span class="halal-note">✓ حلال مؤكّد · شامي</span></div>
+          <div class="dinner-desc">عشاء وداع خفيف وقريب — ليلة الرجعة ما تحتاج فخامة ولا طوابير. بعدها ترتيب الشنط براحة.</div>
         </div>
       </div>
 
@@ -1927,6 +1932,7 @@ footer span.v { color: var(--vienna); }
         <div class="alt-row"><div class="alt-slot">الصباح</div><div class="alt-opts"><b>A</b> Flohmarkt في Naschmarkt<span class="or">·</span><b>B</b> نوم + إفطار متأخر في Vollpension<span class="or">·</span><b>C</b> متحف Mozarthaus + حفل</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> Rathausplatz وداع<span class="or">·</span><b>B</b> Swinging Christmas (Big Band)<span class="or">·</span><b>C</b> Stephansplatz + Lamée Rooftop آخر إطلالة</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Steirereck (قائمة سمك بدون كحول)<span class="or">·</span><b>B</b> Le Sept (Mandarin Oriental)<span class="or">·</span><b>C</b> Habibi & Hawara</div></div>
+        <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Naschmarkt مسقوف جزئياً + سبا الفندق</div></div>
       </div>
     </div>
 
@@ -1951,7 +1957,7 @@ footer span.v { color: var(--vienna); }
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">تأشيرة شنغن عبر سفارة التشيك (أطول إقامة) — موعد VFS فوراً</div>
+        <div class="cl-text">تأشيرة شنغن عبر سفارة النمسا (الإقامة الأطول: 8 ليالٍ) — موعد VFS فوراً</div>
         <div class="cl-urgency urg-now">المعالجة 15–45 يوم + انتظار الموعد · تحتاج حجز الطيران والفنادق والتأمين قبل التقديم</div>
       </div>
     </div>
@@ -1965,14 +1971,14 @@ footer span.v { color: var(--vienna); }
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">Grand Mark Prague — Honeymoon Suite · 6 ليالٍ (30 نوفمبر – 6 ديسمبر)</div>
+        <div class="cl-text">Grand Mark Prague — Honeymoon Suite · 5 ليالٍ (30 نوفمبر – 5 ديسمبر)</div>
         <div class="cl-urgency urg-now">سويتات الفنادق الكبيرة تنفد أولاً في موسم الأسواق · اطلب تأكيد "غرفة نوم + صالة منفصلة" كتابياً</div>
       </div>
     </div>
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">The Amauris Vienna — Corner Suite · 7 ليالٍ (6 – 13 ديسمبر)</div>
+        <div class="cl-text">The Amauris Vienna — Corner Suite · 8 ليالٍ (5 – 13 ديسمبر)</div>
         <div class="cl-urgency urg-now">نفس الشيء — واطلب تجهيز شهر العسل</div>
       </div>
     </div>
@@ -1986,14 +1992,14 @@ footer span.v { color: var(--vienna); }
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">حفل Elīna Garanča — Konzerthaus · الخميس 10 ديسمبر</div>
-        <div class="cl-urgency urg-now">عرض واحد فقط بالموسم · التذاكر الجيدة تُباع في أكتوبر</div>
+        <div class="cl-text">تجربة مميزة ثانية — اختاروا وحدة: حفل Garanča (10 ديسمبر) أو سبا للأزواج أو Musikverein</div>
+        <div class="cl-urgency urg-now">لو اخترتم Garanča: عرض واحد بالموسم، احجزوا بعد ما تسمعون لها</div>
       </div>
     </div>
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">كابينة عشاء خاصة في Riesenrad · الجمعة 11 ديسمبر</div>
+        <div class="cl-text">كابينة عشاء خاصة في Riesenrad · الجمعة 11 ديسمبر (التجربة المميزة الأولى)</div>
         <div class="cl-urgency urg-now">كابينات قليلة وتُحجز شهرين مسبقاً</div>
       </div>
     </div>
@@ -2004,7 +2010,7 @@ footer span.v { color: var(--vienna); }
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">Steirereck فيينا — عشاء الوداع (اطلبوا قائمة سمك بدون كحول) · السبت 12 ديسمبر</div>
+        <div class="cl-text">Steirereck فيينا — العشاء الرومانسي (قائمة سمك بدون كحول) · الأربعاء 9 ديسمبر</div>
         <div class="cl-urgency urg-soon">الحجز شهرين مسبقاً</div>
       </div>
     </div>
@@ -2025,7 +2031,7 @@ footer span.v { color: var(--vienna); }
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">قطار Railjet براغ → فيينا · الأحد 6 ديسمبر 11:00 · First Class</div>
+        <div class="cl-text">قطار Railjet براغ → فيينا · السبت 5 ديسمبر 11:00 · First Class</div>
         <div class="cl-urgency urg-soon">Sparschiene يفتح ~3 أشهر قبل الموعد — ~20 يورو/شخص بدل 70</div>
       </div>
     </div>
@@ -2178,6 +2184,22 @@ setInterval(updateCountdowns, 1000);
   }
 })();
 
+// Maps links on every place
+document.querySelectorAll('.act-name, .dinner-name, .t-name > span:first-child, .event-title').forEach(el => {
+  const sec = el.closest('#prague') ? 'Prague' : 'Vienna';
+  const txt = el.textContent.replace(/^(⭐|أساسي|اختياري)\s*/,'').split('<')[0].trim();
+  const a = document.createElement('a');
+  a.className = 'map-link'; a.target = '_blank'; a.rel = 'noopener'; a.textContent = '📍';
+  a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(txt.split('·')[0].trim() + ' ' + sec);
+  el.appendChild(a);
+});
+// Today button
+document.getElementById('todayBtn').addEventListener('click', e => {
+  e.preventDefault();
+  const t = new Date(); const key = t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
+  const el = document.querySelector(`.day[data-date="${key}"]`) || document.querySelector('.day[data-date]');
+  el.scrollIntoView({behavior:'smooth', block:'start'});
+});
 // Nav scroll
 document.querySelectorAll('nav a').forEach(a => {
   a.addEventListener('click', e => {
