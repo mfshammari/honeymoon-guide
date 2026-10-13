@@ -724,6 +724,17 @@ nav a.vienna { color: var(--vienna); }
 .map-link:hover { opacity:1; text-decoration:underline; }
 .today-btn { background:rgba(212,175,106,.12); border:1px solid rgba(212,175,106,.4); color:var(--gold) !important; }
 
+/* ── FLIGHT CARD ── */
+.flight-card { border:1px solid rgba(109,200,122,.3); background:rgba(109,200,122,.05); border-radius:3px; padding:16px 20px; margin:0 0 20px; }
+.flight-head { display:flex; justify-content:space-between; align-items:center; gap:10px; margin-bottom:10px; flex-wrap:wrap; }
+.flight-head b { color:var(--snow); font-size:14px; }
+.flight-legs { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+@media(max-width:599px){ .flight-legs{ grid-template-columns:1fr; } }
+.leg { background:var(--card); border:1px solid var(--border); border-radius:3px; padding:10px 12px; font-size:12.5px; line-height:1.7; }
+.leg b { color:var(--snow); }
+.leg .mono { font-family:monospace; color:var(--muted); font-size:11px; }
+.flight-note { font-size:12px; color:#F0A032; margin-top:10px; line-height:1.6; }
+
 /* ── LATE BANNER ── */
 .late-banner {
   display: flex; align-items: center; gap: 18px;
@@ -1011,7 +1022,7 @@ footer span.v { color: var(--vienna); }
   <div class="route-stop">
     <div class="route-icon p">🏰</div>
     <div class="route-name">براغ</div>
-    <div class="route-dates">30 نوفمبر – 5 ديسمبر · 5 ليالٍ</div>
+    <div class="route-dates">30 نوفمبر – 5 ديسمبر · 5 ليالٍ · ✈️ وصول 09:35</div>
   </div>
   <div class="route-connector">←</div>
   <div class="route-stop">
@@ -1088,18 +1099,26 @@ footer span.v { color: var(--vienna); }
       <div class="day-head">
         <div class="day-num">١</div>
         <div class="day-info">
-          <div class="day-title">يوم الوصول — أول مشي في المدينة السحرية</div>
+          <div class="day-title">يوم الوصول — نوم أولاً ثم السحر</div>
           <div class="day-date">الاثنين · 30 نوفمبر</div>
         </div>
       </div>
 
+      <div class="flight-card">
+        <div class="flight-head"><b>✈️ الطيران مؤكّد — Pegasus · حجز 2Y12T7</b><span class="badge b-free">✓ محجوز</span></div>
+        <div class="flight-legs">
+          <div class="leg"><b>PC691</b> الرياض T5 → إسطنبول صبيحة (SAW)<br><span class="mono">30/11 · 02:40 → 06:40 · مقاعد 1E / 1F</span></div>
+          <div class="leg"><b>PC303</b> إسطنبول SAW → براغ T1<br><span class="mono">30/11 · 08:50 → 09:35 · ترانزيت 2 س 10 د</span></div>
+        </div>
+        <div class="flight-note">▲ غيّروا وجبة PC303 من "Ham & Cheddar" لـChicken من Manage Booking · الشنط: محمد 20 كجم، عريب 40 كجم · كابينة 55×40×23 · كونوا بالمطار 23:30 (3 ساعات قبل)</div>
+      </div>
       <div class="act star-p">
         <div class="act-head">
           <div class="act-name">⭐ ساحة Old Town Square وسوق الكريسماس ليلاً</div>
           <span class="badge b-free">مجاني</span>
         </div>
-        <p>أول ليلة أهم ليلة. توصلون وقت الظهر، تشيكون بالفندق. بعد الاستراحة روحوا لساحة Old Town مع غروب الشمس (4:30م في ديسمبر). السوق يضيء عند الغروب بالكامل — آلاف المصابيح، رائحة البنش الساخن والقرفة، موسيقى كلاسيكية حية، والثلج على أسقف الكنائس القوطية. التجربة التي جئتم من أجلها.</p>
-        <div class="act-time">14:00 وصول وتشيك إن · 16:00 استراحة · 16:30 توجه للساحة · 17:00 إضاءة السوق · 19:00 عشاء</div>
+        <p>توصلون 09:35 بعد ليلة طيران. تاكسي/Uber للفندق (~120 ر، 30 دقيقة) — اطلبوا Early check-in مسبقاً بالإيميل، وإلا احفظوا الشنط وافطروا في Café Savoy. ثم <strong>ناموا حتى 15:00</strong>؛ هذا جزء من الخطة لا كسل. بعدها لساحة Old Town مع غروب الشمس (4:30م). السوق يضيء عند الغروب بالكامل — آلاف المصابيح، رائحة البنش الساخن والقرفة، موسيقى كلاسيكية حية، والثلج على أسقف الكنائس القوطية. التجربة التي جئتم من أجلها.</p>
+        <div class="act-time">09:35 هبوط · 10:30 الفندق (Early check-in) · 11:00 إفطار · 12:00–15:00 نوم · 16:30 الساحة · 17:00 إضاءة السوق · 19:00 عشاء</div>
         <div class="fact"><strong>🕰️ الساعة الفلكية (Orloj):</strong> أقدم ساعة فلكية تعمل في العالم منذ 1410م. كل ساعة يخرج 12 رسولاً خشبياً ويدور الموت بجرسه. يُقال أن صانعها فُقئت عيناه لمنعه من صنع ثانية!</div>
       </div>
 
@@ -1141,7 +1160,7 @@ footer span.v { color: var(--vienna); }
       </div>
       <div class="alt">
         <div class="alt-title">خيارات بديلة بنفس الوقت — اختاروا على المزاج</div>
-        <div class="alt-row"><div class="alt-slot">بعد الوصول</div><div class="alt-opts"><b>A</b> نوم ساعتين ثم السوق مع الغروب<span class="or">·</span><b>B</b> تشيك إن وغداء في Habibi ثم مشي الساحة<span class="or">·</span><b>C</b> سبا الفندق أول يوم وسوق الليلة التالية</div></div>
+        <div class="alt-row"><div class="alt-slot">بعد الوصول</div><div class="alt-opts"><b>A</b> نوم 3 ساعات ثم السوق مع الغروب<span class="or">·</span><b>B</b> لو ما نمتم بالطيارة: نوم كامل حتى المغرب وعشاء قريب فقط، السوق بكرة<span class="or">·</span><b>C</b> سبا الفندق بدل النوم</div></div>
         <div class="alt-row"><div class="alt-slot">المساء</div><div class="alt-opts"><b>A</b> سوق Old Town + بنش ساخن (بدون كحول)<span class="or">·</span><b>B</b> جولة مشي ليلية مرشدة 2 ساعة (~60 ر)<span class="or">·</span><b>C</b> حفل Klementinum 18:00 ثم السوق</div></div>
         <div class="alt-row"><div class="alt-slot">العشاء</div><div class="alt-opts"><b>A</b> Habibi Prague (حلال 100%)<span class="or">·</span><b>B</b> Habibi Prague (حلال 100%)<span class="or">·</span><b>C</b> Mlýnec سمك بإطلالة الجسر</div></div>
         <div class="alt-row"><div class="alt-slot">☔ مطر</div><div class="alt-opts">Habibi + مشي داخل Palladium mall ثم السوق بعد المطر</div></div>
@@ -1957,6 +1976,13 @@ footer span.v { color: var(--vienna); }
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
+        <div class="cl-text">تذكرة العودة: فيينا → الرياض · الأحد 13 ديسمبر (ما زالت غير محجوزة)</div>
+        <div class="cl-urgency urg-now">السعودية مباشر 5.5 ساعة، أو Pegasus عبر SAW بنفس الحساب · ملف التأشيرة يحتاج تذكرة العودة</div>
+      </div>
+    </div>
+    <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
+      <div class="cl-circle"></div>
+      <div>
         <div class="cl-text">تأشيرة شنغن عبر سفارة النمسا (الإقامة الأطول: 8 ليالٍ) — موعد VFS فوراً</div>
         <div class="cl-urgency urg-now">المعالجة 15–45 يوم + انتظار الموعد · تحتاج حجز الطيران والفنادق والتأمين قبل التقديم</div>
       </div>
@@ -1964,8 +1990,8 @@ footer span.v { color: var(--vienna); }
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
       <div class="cl-circle"></div>
       <div>
-        <div class="cl-text">تذاكر الطيران: الرياض → براغ (30 نوفمبر) | فيينا → الرياض (13 ديسمبر) — Open-jaw</div>
-        <div class="cl-urgency urg-now">السعودية/Qatar/Turkish/Austrian · الحجز الآن يوفر 30–50% عن الشهر القادم</div>
+        <div class="cl-text">✓ الذهاب محجوز: Pegasus PC691 + PC303 · الرياض → براغ 30 نوفمبر · حجز 2Y12T7</div>
+        <div class="cl-urgency" style="color:#6DC87A">مؤكّد 13 أكتوبر · باقي: تغيير وجبة PC303 + طلب Early check-in من الفندق</div>
       </div>
     </div>
     <div class="cl-item" onclick="this.classList.toggle('done'); this.querySelector('.cl-circle').textContent = this.classList.contains('done') ? '✓' : ''">
